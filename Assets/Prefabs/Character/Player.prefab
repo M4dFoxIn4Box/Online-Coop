@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4133624952705570}
+  - component: {fileID: 114805557879670864}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -334,6 +335,38 @@ MonoBehaviour:
   m_UseTorque: 1
   m_MaxAngularVelocity: 25
   m_JumpPower: 2
+--- !u!114 &114805557879670864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1024828607058766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 169
+    i1: 187
+    i2: 1
+    i3: 79
+    i4: 217
+    i5: 67
+    i6: 233
+    i7: 180
+    i8: 74
+    i9: 194
+    i10: 157
+    i11: 23
+    i12: 213
+    i13: 2
+    i14: 181
+    i15: 238
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114980625411631558
 MonoBehaviour:
   m_ObjectHideFlags: 1
