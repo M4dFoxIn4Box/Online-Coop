@@ -597,9 +597,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 1b21e40e-6999-4b9c-909b-fe475502f676
+  cloudProjectId: ff99f450-9ffa-436f-b44a-ec70653e3cab
   projectName: Online Coop
-  organizationId: m4dfox
+  organizationId: djnn
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
