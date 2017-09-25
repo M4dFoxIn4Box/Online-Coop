@@ -33,5 +33,6 @@ using UnityEngine.Networking;
     public void QuitterPause ()
     {
        NetworkManager.singleton.StopClient();
+        NetworkManager.singleton.StopMatchMaker();
     }
 }
