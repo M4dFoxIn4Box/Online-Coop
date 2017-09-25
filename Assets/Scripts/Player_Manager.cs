@@ -19,7 +19,16 @@ public class Player_Manager : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter (Collider other)
+	public void CheckPointTake(Vector3 checkpointPosition)
+	{
+		currentCheckpointPosition = checkpointPosition ;
+	}
+
+	public void Death()
+	{
+		transform.position = currentCheckpointPosition ;
+	}
+	/*void OnTriggerEnter (Collider other)
 	{
 
 		if (other.CompareTag("Checkpoint"))
@@ -62,7 +71,7 @@ public class Player_Manager : MonoBehaviour {
 		{
 			TutoJump.SetActive(false);
 		}
-	}
+	}*/
 
 
 }
