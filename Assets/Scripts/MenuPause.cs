@@ -32,6 +32,6 @@ using UnityEngine.Networking;
 
     public void QuitterPause ()
     {
-       Network.Disconnect ();
+       NetworkManager.singleton.StopClient();
     }
 }
