@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 54255783035308818}
   - component: {fileID: 114825690145547370}
   - component: {fileID: 114371997678884752}
+  - component: {fileID: 114108728334012860}
   m_Layer: 9
   m_Name: PlayerBall
   m_TagString: Player
@@ -64,7 +65,7 @@ GameObject:
   - component: {fileID: 114479112114886746}
   m_Layer: 0
   m_Name: CameraPlayer
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: -215833656, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1372666815037364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.863716, y: 7.522994, z: -3.4560318}
+  m_LocalPosition: {x: 18.863716, y: 5.76, z: -3.4560318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4017522717251678}
@@ -250,14 +251,14 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1372666815037364}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0.1
-  m_AngularDrag: 1
+  m_Mass: 5
+  m_Drag: 0
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!54 &54708311935964956
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -287,6 +288,17 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1109600248892054}
   m_Enabled: 1
+--- !u!114 &114108728334012860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1372666815037364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d6f7d42ea8b864d8473a244b5f830a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114371997678884752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -313,7 +325,7 @@ MonoBehaviour:
   returnTime: 0.4
   sphereCastRadius: 0.1
   visualiseInEditor: 1
-  closestDistance: 8.65
+  closestDistance: 5
   dontClipTag: Player
 --- !u!114 &114777710883257692
 MonoBehaviour:
@@ -329,8 +341,8 @@ MonoBehaviour:
   m_Target: {fileID: 4191727111533234}
   m_AutoTargetPlayer: 1
   m_UpdateType: 0
-  m_MoveSpeed: 1
-  m_TurnSpeed: 1.5
+  m_MoveSpeed: 100
+  m_TurnSpeed: 53
   m_TurnSmoothing: 0
   m_TiltMax: 75
   m_TiltMin: 45
@@ -347,10 +359,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e004fefca5c7ba44d9c5ffd46fdee2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovePower: 3
+  m_MovePower: 50
   m_UseTorque: 1
-  m_MaxAngularVelocity: 25
-  m_JumpPower: 2
+  m_MaxAngularVelocity: 100
+  m_JumpPower: 10
 --- !u!124 &124928802214503972
 Behaviour:
   m_ObjectHideFlags: 1
