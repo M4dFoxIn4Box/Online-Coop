@@ -37,7 +37,7 @@ public class Player_Death_Manager : MonoBehaviour {
 		}
 		if (other.CompareTag("WinTrigger"))
 		{
-			SceneManager.LoadScene("Killian_Test_2", LoadSceneMode.Single);
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 			Debug.Log("Win");
 		}
 
