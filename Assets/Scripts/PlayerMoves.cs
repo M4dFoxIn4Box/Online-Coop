@@ -10,7 +10,8 @@ public class PlayerMoves : NetworkBehaviour {
 
 	public override void OnStartLocalPlayer ()
 	{
-		gameObject.tag = "Player" ;
+		playerBall.tag = "Player" ;
+		playerCamera.SetActive(true) ;
 	}
 
 	// Use this for initialization
@@ -22,13 +23,5 @@ public class PlayerMoves : NetworkBehaviour {
 	void Update () 
 	{
 		
-	}
-
-	public override void OnStartClient ()
-	{
-		if(!isLocalPlayer)
-		{
-			playerCamera.SetActive(false) ;
-		}
 	}
 }
