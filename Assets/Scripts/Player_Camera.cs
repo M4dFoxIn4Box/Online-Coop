@@ -5,14 +5,9 @@ using UnityEngine.Networking;
 
 public class Player_Settings : NetworkBehaviour {
 
-	public GameObject playerCamera ;
-	public GameObject playerBall ;
-
 	public override void OnStartLocalPlayer ()
 	{
-		playerBall.tag = "Player" ;
-		playerCamera.SetActive(true) ;
-			
+		gameObject.tag = "Player" ;			
 	}
 
 	// Use this for initialization
