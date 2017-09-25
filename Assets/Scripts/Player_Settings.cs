@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class Player_Settings : NetworkBehaviour {
+public class Player_Camera : NetworkBehaviour {
 
 	public GameObject playerCamera ;
 	public GameObject playerBall ;
@@ -12,7 +12,6 @@ public class Player_Settings : NetworkBehaviour {
 	{
 		playerBall.tag = "Player" ;
 		playerCamera.SetActive(true) ;
-			
 	}
 
 	// Use this for initialization

@@ -1,10 +1,11 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.Networking;
 
 namespace UnityStandardAssets.Vehicles.Ball
 {
-    public class BallUserControl : MonoBehaviour
+    public class BallUserControl : NetworkBehaviour
     {
         private Ball ball; // Reference to the ball controller.
 
@@ -38,6 +39,11 @@ namespace UnityStandardAssets.Vehicles.Ball
 
         private void Update()
         {
+
+            if (!isLocalPlayer)
+            {
+                return;
+            }
             // Get the axis and jump input.
 
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
@@ -61,6 +67,10 @@ namespace UnityStandardAssets.Vehicles.Ball
 
         private void FixedUpdate()
         {
+            if (!isLocalPlayer)
+            {
+                return;
+            }
             // Call the Move function of the ball controller
             ball.Move(move, jump);
             jump = false;
