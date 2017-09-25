@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Player_Manager : MonoBehaviour {
 
 	private Vector3 currentCheckpointPosition;
+	public GameObject TutoMoves;
+	public GameObject TutoJump;
 
 	// Use this for initialization
 	void Start () {
@@ -40,7 +42,26 @@ public class Player_Manager : MonoBehaviour {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 			Debug.Log("Win");
 		}
+		if (other.CompareTag("TutoMoves"))
+		{
+			TutoMoves.SetActive(true);
+		}
+		if (other.CompareTag("TutoJump"))
+		{
+			TutoJump.SetActive(true);
+		}
 
+	}
+	void OnTriggerExit (Collider other)
+	{
+		if (other.CompareTag("TutoMoves"))
+		{
+			TutoMoves.SetActive(false);
+		}
+		if (other.CompareTag("TutoJump"))
+		{
+			TutoJump.SetActive(false);
+		}
 	}
 
 

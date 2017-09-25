@@ -7,6 +7,8 @@ TagManager:
   - Checkpoint
   - DeathTrigger
   - WinTrigger
+  - TutoMoves
+  - TutoJump
   layers:
   - Default
   - TransparentFX
