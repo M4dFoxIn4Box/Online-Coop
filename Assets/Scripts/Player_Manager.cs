@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player_Death_Manager : MonoBehaviour {
+public class Player_Manager : MonoBehaviour {
 
 	private Vector3 currentCheckpointPosition;
 
