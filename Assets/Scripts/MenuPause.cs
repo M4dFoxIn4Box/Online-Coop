@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 
 	public class MenuPause : MonoBehaviour {
 	
@@ -31,6 +32,6 @@ using UnityEngine.SceneManagement;
 
     public void QuitterPause ()
     {
-       SceneManager.LoadScene (Room);
+       Network.Disconnect ();
     }
 }
