@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
-	public class MenuPause : NetworkBehaviour {
+	public class MenuPause : MonoBehaviour {
 	
 	public string Room;
 	private bool isPause = false;
@@ -32,15 +32,6 @@ using UnityEngine.Networking;
 
     public void QuitterPause ()
     {
-    	if(isServer)
-    	{
-    		NetworkManager.singleton.StopHost();
-    	}
-
-    	if(!isServer)
-    	{
-    		NetworkManager.singleton.StopClient();
-    	}
-       
+       NetworkManager.singleton.StopClient();
     }
 }
