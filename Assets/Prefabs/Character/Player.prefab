@@ -380,6 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1964416384616008}
+  playerBall: {fileID: 1837030960389994}
 --- !u!114 &114980625411631558
 MonoBehaviour:
   m_ObjectHideFlags: 1

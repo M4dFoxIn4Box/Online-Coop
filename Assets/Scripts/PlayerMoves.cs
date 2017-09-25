@@ -6,6 +6,7 @@ using UnityEngine.Networking;
 public class PlayerMoves : NetworkBehaviour {
 
 	public GameObject playerCamera ;
+	public GameObject playerBall ;
 
 	public override void OnStartLocalPlayer ()
 	{
