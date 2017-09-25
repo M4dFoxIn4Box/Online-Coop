@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Death_Manager : MonoBehaviour {
 
@@ -33,6 +34,11 @@ public class Player_Death_Manager : MonoBehaviour {
 			Debug.Log("Mort");
 			GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
 			
+		}
+		if (other.CompareTag("WinTrigger"))
+		{
+			SceneManager.LoadScene("Killian_Test_2", LoadSceneMode.Single);
+			Debug.Log("Win");
 		}
 
 	}
