@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-	public class MenuManager : MonoBehaviour {
+	public class MenuPause : MonoBehaviour {
 	
 	public string Seb_Test;
 	private bool isPause = false;
