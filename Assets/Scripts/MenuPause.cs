@@ -5,21 +5,9 @@ using UnityEngine.SceneManagement;
 
 	public class MenuManager : MonoBehaviour {
 	
-	public string Scene_LevelD;
+	public string Seb_Test;
 	private bool isPause = false;
 	public GameObject menuPause;
-
-    public void QuitMenuAccueil ()
-   	{
-        Application.Quit();
-        Debug.Log("quit game");
-    }
-
-	public void PlayMenuAccueil ()
-   	{
-        SceneManager.LoadScene (Scene_LevelD);
-   	}
-
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +31,6 @@ using UnityEngine.SceneManagement;
 
     public void QuitterPause ()
     {
-       SceneManager.LoadScene (Scene_LevelD);
+       SceneManager.LoadScene (Seb_Test);
     }
 }
