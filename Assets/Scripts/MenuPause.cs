@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 	public class MenuPause : MonoBehaviour {
 	
-	public string Seb_Test;
+	public string Room;
 	private bool isPause = false;
 	public GameObject menuPause;
 
@@ -31,6 +31,6 @@ using UnityEngine.SceneManagement;
 
     public void QuitterPause ()
     {
-       SceneManager.LoadScene (Seb_Test);
+       SceneManager.LoadScene (Room);
     }
 }
