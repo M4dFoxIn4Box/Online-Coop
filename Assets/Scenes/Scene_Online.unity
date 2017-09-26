@@ -678,11 +678,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114408635713275664, guid: 27ab80cc1ecaa504a994fa58951687f8,
-        type: 2}
-      propertyPath: winTriggers.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4427730783980958, guid: 27ab80cc1ecaa504a994fa58951687f8, type: 2}
       propertyPath: m_LocalPosition.x
       value: 4997.2197
