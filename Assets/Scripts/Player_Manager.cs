@@ -6,6 +6,7 @@ using UnityEngine.Networking ;
 
 public class Player_Manager : NetworkBehaviour  {
 
+	[SyncVar]
 	private Vector3 currentCheckpointPosition;
 	public GameObject TutoMoves;
 	public GameObject TutoJump;
