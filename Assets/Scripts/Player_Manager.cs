@@ -27,11 +27,16 @@ public class Player_Manager : NetworkBehaviour  {
 
 	[ClientRpc]
 	public void RpcDeath()
-	{
-		//if(isLocalPlayer)
-		//{
+	{	
+		if(!isServer)
+		{
+			return ;
+		}
+		
+		if(isLocalPlayer)
+		{
 			transform.position = new Vector3(0,0,0) ;
-		//}
+		}
 	}
 	/*void OnTriggerEnter (Collider other)
 	{
