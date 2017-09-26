@@ -38,6 +38,7 @@ public class Game_Manager : NetworkBehaviour {
 	[Command]
 	public void CmdAddNb (){
 		nbToWin += 1;
+		Debug.Log(nbToWin);
 	}
 	[ClientRpc]
 	void RpcReturnToLobby (){
