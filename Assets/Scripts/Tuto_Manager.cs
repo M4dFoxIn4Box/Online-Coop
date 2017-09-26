@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Networking ;
 
-public class Game_Manager : NetworkBehaviour  {
+public class Tuto_Manager : MonoBehaviour  {
 
 	public GameObject tutoMove;
 	public GameObject tutoJump;

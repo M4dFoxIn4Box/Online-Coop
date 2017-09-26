@@ -18,7 +18,7 @@ public class Tuto_Jump_Trigger : MonoBehaviour {
 	{
 		if(other.CompareTag("Player"))
 		{
-			other.transform.GetComponent<Game_Manager>().TutoJump() ;
+			other.transform.GetComponent<Tuto_Manager>().TutoJump() ;
 		}
 	}
 }
