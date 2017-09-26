@@ -19,7 +19,7 @@ public class Death_Trigger_Script : MonoBehaviour {
 	{
 		if(other.CompareTag("Player"))
 		{
-			other.transform.GetComponent<Player_Manager>().RpcDeath() ;
+			other.transform.GetComponent<Player_Manager>().CmdRespawn() ;
 			Debug.Log("Mort") ;
 		}
 	}

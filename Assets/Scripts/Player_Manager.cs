@@ -31,4 +31,10 @@ public class Player_Manager : NetworkBehaviour  {
 		transform.position = new Vector3(0,0,0) ;
 	}
 
+	[Command]
+	public void CmdRespawn()
+	{
+		RpcDeath() ;
+	}
+
 }
