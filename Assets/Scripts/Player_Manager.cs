@@ -28,7 +28,10 @@ public class Player_Manager : NetworkBehaviour  {
 	[ClientRpc]
 	public void RpcDeath()
 	{
-		transform.position = currentCheckpointPosition ;
+		if(isLocalPlayer)
+		{
+			transform.position = currentCheckpointPosition ;
+		}
 	}
 	/*void OnTriggerEnter (Collider other)
 	{

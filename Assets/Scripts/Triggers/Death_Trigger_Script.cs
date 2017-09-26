@@ -14,6 +14,7 @@ public class Death_Trigger_Script : MonoBehaviour {
 		
 	}
 
+	
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.CompareTag("Player"))
