@@ -28,10 +28,7 @@ public class Player_Manager : NetworkBehaviour  {
 	[Command]
 	public void CmdDeath()
 	{	
-		if(isLocalPlayer)
-		{
-			transform.position = new Vector3(0,0,0) ;
-		}
+		transform.position = new Vector3(0,0,0) ;
 	}
 	/*void OnTriggerEnter (Collider other)
 	{
