@@ -25,14 +25,9 @@ public class Player_Manager : NetworkBehaviour  {
 		currentCheckpointPosition = checkpointPosition ;
 	}
 
-	[ClientRpc]
-	public void RpcDeath()
+	[Command]
+	public void CmdDeath()
 	{	
-		if(!isServer)
-		{
-			return ;
-		}
-		
 		if(isLocalPlayer)
 		{
 			transform.position = new Vector3(0,0,0) ;
