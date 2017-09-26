@@ -32,11 +32,13 @@ public class Game_Manager : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		RpcReturnToLobby();
 		
 	}
 	[Command]
 	public void CmdAddNb (){
 		nbToWin += 1;
+		Debug.Log(nbToWin);
 	}
 	[ClientRpc]
 	void RpcReturnToLobby (){
