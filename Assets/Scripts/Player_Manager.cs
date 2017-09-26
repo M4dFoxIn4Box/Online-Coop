@@ -25,12 +25,12 @@ public class Player_Manager : NetworkBehaviour  {
 		currentCheckpointPosition = checkpointPosition ;
 	}
 
-	[Command]
-	public void CmdDeath()
+	[ClientRpc]
+	public void RpcDeath()
 	{
 		if(isLocalPlayer)
 		{
-			transform.position = currentCheckpointPosition ;
+			transform.position = new Vector3(0,0,0) ;
 		}
 	}
 	/*void OnTriggerEnter (Collider other)
