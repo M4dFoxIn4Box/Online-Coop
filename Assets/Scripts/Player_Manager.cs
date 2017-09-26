@@ -10,8 +10,13 @@ public class Player_Manager : NetworkBehaviour  {
 	public GameObject TutoMoves;
 	public GameObject TutoJump;
 
+	void Awake()
+	{
+		//DontDestroyOnLoad() ;
+	}
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		
 	}
 	
@@ -25,16 +30,10 @@ public class Player_Manager : NetworkBehaviour  {
 		currentCheckpointPosition = checkpointPosition ;
 	}
 
-	[ClientRpc]
-	public void RpcDeath()
+	public void Death()
 	{	
 		transform.position = currentCheckpointPosition ;
 	}
 
-	[Command]
-	public void CmdRespawn()
-	{
-		RpcDeath() ;
-	}
 
 }
