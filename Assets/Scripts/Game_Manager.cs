@@ -32,6 +32,7 @@ public class Game_Manager : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		RpcReturnToLobby();
 		
 	}
 	[Command]
