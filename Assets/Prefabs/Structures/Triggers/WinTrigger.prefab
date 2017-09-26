@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 136059004469458406}
   - component: {fileID: 23759719544277658}
   - component: {fileID: 114265926514314248}
+  - component: {fileID: 114586399429881736}
+  - component: {fileID: 114812707614845828}
   m_Layer: 0
   m_Name: WinTrigger
   m_TagString: WinTrigger
@@ -93,6 +95,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17dc543fc7b5d954186eaa4320d7e8b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+--- !u!114 &114586399429881736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1763117721901044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 179
+    i1: 236
+    i2: 109
+    i3: 170
+    i4: 114
+    i5: 64
+    i6: 107
+    i7: 244
+    i8: 9
+    i9: 133
+    i10: 202
+    i11: 252
+    i12: 197
+    i13: 147
+    i14: 252
+    i15: 178
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114812707614845828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1763117721901044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!136 &136059004469458406
 CapsuleCollider:
   m_ObjectHideFlags: 1
