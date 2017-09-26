@@ -8,6 +8,22 @@ public class Game_Manager : NetworkBehaviour {
 
 	[SyncVar]
 	public int nbToWin;
+	private static Game_Manager instance;
+	public static Game_Manager Instance () 
+    {
+    	return instance;
+    }
+
+    void Awake (){
+    	if (instance != null)
+        {
+            Destroy (gameObject);
+        }
+        else 
+        {
+            instance = this;
+        }
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +40,9 @@ public class Game_Manager : NetworkBehaviour {
 	}
 	[ClientRpc]
 	void RpcReturnToLobby (){
-		Network.Disconnect();
+		if (nbToWin >= 2){
+			Network.Disconnect();
+		}
+		
 	}
 }

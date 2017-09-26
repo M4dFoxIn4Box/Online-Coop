@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Win_Trigger : MonoBehaviour {
 
+	public GameObject gameManager;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -17,7 +19,7 @@ public class Win_Trigger : MonoBehaviour {
 	{
 		if(other.CompareTag("Player"))
 		{
-			other.transform.GetComponent<Game_Manager>().CmdAddNb() ;
+			Game_Manager.Instance().CmdAddNb() ;
 			Destroy(gameObject);
 		}
 	}
