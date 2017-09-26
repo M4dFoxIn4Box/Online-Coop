@@ -23,13 +23,14 @@ GameObject:
   - component: {fileID: 136215293792236000}
   - component: {fileID: 23487034073133748}
   - component: {fileID: 114755823207909480}
+  - component: {fileID: 114572244328469848}
   m_Layer: 0
   m_Name: WinTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4360100223405886
 Transform:
   m_ObjectHideFlags: 1
@@ -82,6 +83,38 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1712943617172936}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114572244328469848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1712943617172936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 179
+    i1: 236
+    i2: 109
+    i3: 170
+    i4: 114
+    i5: 64
+    i6: 107
+    i7: 244
+    i8: 9
+    i9: 133
+    i10: 202
+    i11: 252
+    i12: 197
+    i13: 147
+    i14: 252
+    i15: 178
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114755823207909480
 MonoBehaviour:
   m_ObjectHideFlags: 1
