@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking ;
 
-public class Player_Manager : MonoBehaviour {
+public class Player_Manager : NetworkBehaviour  {
 
 	private Vector3 currentCheckpointPosition;
 	public GameObject TutoMoves;
@@ -24,7 +25,8 @@ public class Player_Manager : MonoBehaviour {
 		currentCheckpointPosition = checkpointPosition ;
 	}
 
-	public void Death()
+	[ClientRpc]
+	public void RpcDeath()
 	{
 		transform.position = currentCheckpointPosition ;
 	}
