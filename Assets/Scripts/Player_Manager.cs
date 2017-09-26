@@ -25,8 +25,8 @@ public class Player_Manager : NetworkBehaviour  {
 		currentCheckpointPosition = checkpointPosition ;
 	}
 
-	[ClientRpc]
-	public void RpcDeath()
+	[Command]
+	public void CmdDeath()
 	{
 		if(isLocalPlayer)
 		{
