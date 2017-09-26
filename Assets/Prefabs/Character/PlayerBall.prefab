@@ -26,9 +26,9 @@ GameObject:
   - component: {fileID: 54968735333612036}
   - component: {fileID: 114670475321430644}
   - component: {fileID: 114664814653929488}
-  - component: {fileID: 114812545847012856}
   - component: {fileID: 114025265749408650}
   - component: {fileID: 114326944261747760}
+  - component: {fileID: 114263139263068256}
   m_Layer: 9
   m_Name: PlayerBall
   m_TagString: Untagged
@@ -114,8 +114,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9d1cc09cf5ffb47b70c0aef4c3485f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TutoMoves: {fileID: 0}
-  TutoJump: {fileID: 0}
+--- !u!114 &114263139263068256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1442219427384580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc1e317d40b4c3498fede0294f85fe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114326944261747760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,17 +204,6 @@ MonoBehaviour:
   m_UseTorque: 1
   m_MaxAngularVelocity: 25
   m_JumpPower: 3
---- !u!114 &114812545847012856
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1442219427384580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f30e3a36a3556a49858fdc801f4500a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &135394672273196932
 SphereCollider:
   m_ObjectHideFlags: 1

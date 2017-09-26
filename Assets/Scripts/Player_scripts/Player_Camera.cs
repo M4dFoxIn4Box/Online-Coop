@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class Player_Settings : NetworkBehaviour {
+public class Player_Camera : NetworkBehaviour {
 
 	public override void OnStartLocalPlayer ()
 	{
-		gameObject.tag = "Player" ;			
+		gameObject.tag = "Player" ;
+		CmdRegisterMe();			
 	}
 
 	// Use this for initialization
@@ -19,5 +20,15 @@ public class Player_Settings : NetworkBehaviour {
 	void Update () 
 	{
 		
+	}
+
+	[Command]
+	void CmdRegisterMe (){
+		Game_Manager.Instance().AddPlayer(this);
+	}
+
+	[ClientRpc]
+	public void RpcQuitGame (){
+		NetworkLobbyManager.singleton.StopClient();
 	}
 }

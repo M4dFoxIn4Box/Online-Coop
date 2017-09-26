@@ -6,8 +6,12 @@ using UnityEngine.Networking ;
 
 public class Game_Manager : NetworkBehaviour {
 
-	[SyncVar(hook = "ReturnToLobby")]
-	public int nbToWin = 0;
+	private int nbToWin = 0;
+
+	private List<Player_Camera> playerList = new List<Player_Camera>();
+	public GameObject[] winTriggers;
+
+
 
 	private static Game_Manager instance;
 	public static Game_Manager Instance () 
@@ -32,23 +36,40 @@ public class Game_Manager : NetworkBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () 
-	{
-		//RpcReturnToLobby();
+	void Update () {
+
 	}
 
-	public void AddNb ()
-	{
-		nbToWin ++;
+	[Command]
+	public void CmdAddNb (GameObject trig){
+		nbToWin += 1;
+		if (trig == winTriggers[0])
+		{
+			NetworkServer.UnSpawn(winTriggers[0]);
+			winTriggers[0].SetActive(false);
+		}
+		if (trig == winTriggers[1])
+		{
+			NetworkServer.UnSpawn(winTriggers[1]);
+			winTriggers[1].SetActive(false);
+		}
+		if (nbToWin >= 2)
+		{
+			playerList[0].RpcQuitGame();
+			playerList[1].RpcQuitGame();
+		}
+		
 		Debug.Log(nbToWin);
 	}
 
-	void ReturnToLobby (int number)
-	{
-		if (number >= 2)
+	public void AddPlayer (Player_Camera playerScript){
+		playerList.Add(playerScript);
+		if (playerList.Count == 2)
 		{
-			Network.Disconnect();
+			winTriggers[0].SetActive(true);
+			NetworkServer.Spawn(winTriggers[0]);
+			winTriggers[1].SetActive(true);
+			NetworkServer.Spawn(winTriggers[1]);
 		}
-		
 	}
 }

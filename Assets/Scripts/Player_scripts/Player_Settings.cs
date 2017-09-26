@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class Player_Camera : NetworkBehaviour {
+public class Player_Settings : NetworkBehaviour {
 
 	public GameObject playerCamera ;
 	public GameObject playerBall ;
