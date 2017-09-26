@@ -95,7 +95,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1442219427384580}
   serializedVersion: 2
-  m_Mass: 5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 2
   m_UseGravity: 1
@@ -114,6 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d6f7d42ea8b864d8473a244b5f830a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TutoMoves: {fileID: 0}
+  TutoJump: {fileID: 0}
 --- !u!114 &114326944261747760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,10 +191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e004fefca5c7ba44d9c5ffd46fdee2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovePower: 3
+  m_MovePower: 5
   m_UseTorque: 1
   m_MaxAngularVelocity: 25
-  m_JumpPower: 2
+  m_JumpPower: 6
 --- !u!114 &114812545847012856
 MonoBehaviour:
   m_ObjectHideFlags: 1
