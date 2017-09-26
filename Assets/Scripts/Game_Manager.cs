@@ -6,8 +6,9 @@ using UnityEngine.Networking ;
 
 public class Game_Manager : NetworkBehaviour {
 
-	[SyncVar]
-	public int nbToWin;
+	[SyncVar(hook = "ReturnToLobby")]
+	public int nbToWin = 0;
+
 	private static Game_Manager instance;
 	public static Game_Manager Instance () 
     {
@@ -31,18 +32,21 @@ public class Game_Manager : NetworkBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		RpcReturnToLobby();
-		
+	void Update () 
+	{
+		//RpcReturnToLobby();
 	}
+
 	[Command]
-	public void CmdAddNb (){
+	public void CmdAddNb ()
+	{
 		nbToWin += 1;
 		Debug.Log(nbToWin);
 	}
-	[ClientRpc]
-	void RpcReturnToLobby (){
-		if (nbToWin >= 2){
+
+	void ReturnToLobby (int number)
+	{
+		if (number >= 2){
 			Network.Disconnect();
 		}
 		
