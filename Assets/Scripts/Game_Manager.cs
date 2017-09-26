@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -37,16 +37,16 @@ public class Game_Manager : NetworkBehaviour {
 		//RpcReturnToLobby();
 	}
 
-	[Command]
-	public void CmdAddNb ()
+	public void AddNb ()
 	{
-		nbToWin += 1;
+		nbToWin ++;
 		Debug.Log(nbToWin);
 	}
 
 	void ReturnToLobby (int number)
 	{
-		if (number >= 2){
+		if (number >= 2)
+		{
 			Network.Disconnect();
 		}
 		

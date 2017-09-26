@@ -19,7 +19,7 @@ public class Win_Trigger : MonoBehaviour {
 	{
 		if(other.CompareTag("Player"))
 		{
-			Game_Manager.Instance().CmdAddNb() ;
+			Game_Manager.Instance().AddNb() ;
 			Destroy(gameObject);
 		}
 	}

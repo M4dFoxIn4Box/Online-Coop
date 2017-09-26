@@ -12,7 +12,7 @@ public class Player_Manager : NetworkBehaviour  {
 
 	void Awake()
 	{
-		//DontDestroyOnLoad() ;
+		DontDestroyOnLoad(transform.gameObject) ;
 	}
 	// Use this for initialization
 	void Start () 
