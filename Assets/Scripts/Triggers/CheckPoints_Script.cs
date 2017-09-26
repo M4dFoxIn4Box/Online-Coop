@@ -21,6 +21,7 @@ public class CheckPoints_Script : MonoBehaviour {
 		if(other.CompareTag("Player"))
 		{
 			other.transform.GetComponent<Player_Manager>().CheckPointTake(transform.position) ;
+			Debug.Log("Checkpoint") ;
 		}
 	}
 }
