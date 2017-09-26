@@ -22,6 +22,7 @@ public class CheckPoints_Script : MonoBehaviour {
 		{
 			Debug.Log("Checkpoint") ;
 			other.transform.GetComponent<Player_Manager>().CheckPointTake(transform.position) ;
+			gameObject.SetActive(false) ;
 
 		}
 	}

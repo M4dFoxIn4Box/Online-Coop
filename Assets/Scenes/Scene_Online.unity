@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4948063844171496, guid: 751d67ef0c450cb43b04de666f296074, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1295427747221746, guid: 751d67ef0c450cb43b04de666f296074, type: 2}
       propertyPath: m_IsActive
@@ -331,7 +331,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4040127559995062, guid: 5f21c886000159745a97a00170a3c4ff, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f21c886000159745a97a00170a3c4ff, type: 2}
@@ -373,7 +373,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4814934147925530, guid: b3ec6daa72406bf40985cafcc593fcb2, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3ec6daa72406bf40985cafcc593fcb2, type: 2}
@@ -387,6 +387,8 @@ GameObject:
   m_Component:
   - component: {fileID: 880658577}
   - component: {fileID: 880658576}
+  - component: {fileID: 880658579}
+  - component: {fileID: 880658578}
   m_Layer: 0
   m_Name: Start_Pos_01
   m_TagString: Untagged
@@ -416,8 +418,31 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &880658578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 880658575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd07ac68f6bb73b4792c907fef9dd18f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &880658579
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 880658575}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1022681230
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +452,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1022681232}
   - component: {fileID: 1022681231}
+  - component: {fileID: 1022681234}
+  - component: {fileID: 1022681233}
   m_Layer: 0
   m_Name: Start_Pos_02
   m_TagString: Untagged
@@ -456,8 +483,31 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1022681233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1022681230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd07ac68f6bb73b4792c907fef9dd18f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1022681234
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1022681230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1133418732
 Prefab:
   m_ObjectHideFlags: 0
@@ -495,7 +545,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4814934147925530, guid: b3ec6daa72406bf40985cafcc593fcb2, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1763117721901044, guid: b3ec6daa72406bf40985cafcc593fcb2, type: 2}
       propertyPath: m_Name
