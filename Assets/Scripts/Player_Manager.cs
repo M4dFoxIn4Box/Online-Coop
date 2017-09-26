@@ -33,6 +33,7 @@ public class Player_Manager : NetworkBehaviour  {
 	public void Death()
 	{	
 		transform.position = currentCheckpointPosition ;
+		GetComponent<Rigidbody>().velocity = new Vector3(0,0,0) ;
 	}
 
 
