@@ -446,17 +446,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TutoMoves: {fileID: 0}
   TutoJump: {fileID: 0}
---- !u!114 &1658182399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1658182388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4baaf1a2864b90e419a88acbd7fd73ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1737359182
 Prefab:
   m_ObjectHideFlags: 0
