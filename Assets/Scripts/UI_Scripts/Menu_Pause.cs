@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
-	public class Menu_Pause : MonoBehaviour {
+	public class Menu_Pause : NetworkBehaviour {
 	
 	public string Room;
 	private bool isPause = false;
@@ -29,10 +29,9 @@ using UnityEngine.Networking;
         isPause = !isPause;
         menuPause.SetActive(isPause);
     }
-
-    public void QuitterPause ()
+    [ClientRpc]
+    public void RpcquitterPause ()
     {
         NetworkManager.singleton.StopClient();
-        NetworkManager.singleton.StopMatchMaker();
     }
 }

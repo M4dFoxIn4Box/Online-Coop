@@ -10,7 +10,7 @@ public class Player_Manager : NetworkBehaviour  {
 
 	void Awake()
 	{
-		DontDestroyOnLoad(transform.gameObject) ;
+		//DontDestroyOnLoad(transform.gameObject) ;
 	}
 	// Use this for initialization
 	void Start () 
@@ -33,6 +33,5 @@ public class Player_Manager : NetworkBehaviour  {
 		transform.position = currentCheckpointPosition ;
 		GetComponent<Rigidbody>().velocity = new Vector3(0,0,0) ;
 	}
-
 
 }
