@@ -18,7 +18,7 @@ using UnityEngine.Networking;
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Pause"))
         {
             Continuer();
         } 
@@ -30,7 +30,7 @@ using UnityEngine.Networking;
         menuPause.SetActive(isPause);
     }
 
-    public void QuitterPause ()
+    public void QuitterPause()
     {
         Game_Manager.Instance().CmdQuitGame() ;
     }
