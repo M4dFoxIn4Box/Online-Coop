@@ -197,11 +197,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &416117384 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1927983703037150, guid: c9aae85f878f93548b8e1b0973b78bf8,
-    type: 2}
-  m_PrefabInternal: {fileID: 666895038}
 --- !u!1001 &427540076
 Prefab:
   m_ObjectHideFlags: 0
@@ -341,36 +336,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114953648106222082, guid: c9aae85f878f93548b8e1b0973b78bf8,
-        type: 2}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 0.625
-      objectReference: {fileID: 0}
-    - target: {fileID: 114953648106222082, guid: c9aae85f878f93548b8e1b0973b78bf8,
-        type: 2}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.01838237
-      objectReference: {fileID: 0}
-    - target: {fileID: 114953648106222082, guid: c9aae85f878f93548b8e1b0973b78bf8,
-        type: 2}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.01838237
-      objectReference: {fileID: 0}
-    - target: {fileID: 114821710957227058, guid: c9aae85f878f93548b8e1b0973b78bf8,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitterPause
-      objectReference: {fileID: 0}
-    - target: {fileID: 114732751715270986, guid: c9aae85f878f93548b8e1b0973b78bf8,
-        type: 2}
-      propertyPath: eS
-      value: 
-      objectReference: {fileID: 2118912125}
-    - target: {fileID: 114732751715270986, guid: c9aae85f878f93548b8e1b0973b78bf8,
-        type: 2}
-      propertyPath: firstButtonSelect
-      value: 
-      objectReference: {fileID: 416117384}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9aae85f878f93548b8e1b0973b78bf8, type: 2}
   m_IsPrefabParent: 0
@@ -531,9 +496,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c0ab04e3ecece94d9f6921e109de7f2, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &2118912125 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114512583376282236, guid: c9aae85f878f93548b8e1b0973b78bf8,
-    type: 2}
-  m_PrefabInternal: {fileID: 666895038}
-  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}

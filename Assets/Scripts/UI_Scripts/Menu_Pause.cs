@@ -27,6 +27,10 @@ using UnityEngine.Networking;
     public void Continuer ()
     {
         isPause = !isPause;
+        if(GameObject.FindGameObjectWithTag("Player") != null)
+        {
+         GameObject.FindGameObjectWithTag("Player").GetComponent<UnityStandardAssets.Vehicles.Ball.BallUserControl>().ChangerPause(isPause) ;
+        }
         menuPause.SetActive(isPause);
     }
 
