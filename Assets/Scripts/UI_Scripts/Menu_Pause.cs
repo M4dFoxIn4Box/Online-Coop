@@ -30,8 +30,7 @@ using UnityEngine.Networking;
         menuPause.SetActive(isPause);
     }
 
-    [Command]
-    public void CmdquitterPause ()
+    public void QuitterPause ()
     {
         Game_Manager.Instance().CmdQuitGame() ;
     }
