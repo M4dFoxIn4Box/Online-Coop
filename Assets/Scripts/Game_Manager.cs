@@ -79,4 +79,16 @@ public class Game_Manager : NetworkBehaviour {
 		playerList[0].RpcQuitGame();
 		playerList[1].RpcQuitGame();
 	}
+
+	[Command]
+	public void CmdActivatePlateform (GameObject plateformActive){
+		plateformActive.SetActive(true);
+		NetworkServer.Spawn(plateformActive);
+	}
+
+	[Command]
+	public void CmdStopPlateform (GameObject plateformActive){
+		plateformActive.SetActive(false);
+		NetworkServer.UnSpawn(plateformActive);
+	}
 }
