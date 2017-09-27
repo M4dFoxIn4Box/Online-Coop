@@ -32,7 +32,10 @@ public class Game_Manager : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		winTriggers[0].SetActive(true);
+		winTriggers[1].SetActive(true);
+		NetworkServer.Spawn(winTriggers[0]);
+		NetworkServer.Spawn(winTriggers[1]);
 	}
 	
 	// Update is called once per frame
@@ -40,8 +43,7 @@ public class Game_Manager : NetworkBehaviour {
 
 	}
 
-	[Command]
-	public void CmdAddNb (GameObject trig){
+	public void AddNb (GameObject trig){
 		nbToWin += 1;
 		if (trig == winTriggers[0])
 		{

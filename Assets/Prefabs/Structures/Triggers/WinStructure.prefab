@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4202167470394398}
   - component: {fileID: 33955423976098650}
   - component: {fileID: 23313110506167880}
-  - component: {fileID: 114635788150390180}
   m_Layer: 0
   m_Name: WinStructure
   m_TagString: Untagged
@@ -36,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1178711949523522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4971.79, y: 5000.8, z: 5026.3}
+  m_LocalPosition: {x: 5019.901, y: 5001.059, z: 5020.5537}
   m_LocalScale: {x: 4.832844, y: 1.5588543, z: 1.5588543}
   m_Children: []
   m_Father: {fileID: 0}
@@ -81,35 +80,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1178711949523522}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114635788150390180
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1178711949523522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 21
-    i1: 175
-    i2: 141
-    i3: 37
-    i4: 199
-    i5: 50
-    i6: 31
-    i7: 180
-    i8: 138
-    i9: 196
-    i10: 191
-    i11: 28
-    i12: 67
-    i13: 123
-    i14: 238
-    i15: 83
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0

@@ -41,4 +41,17 @@ public class Player_Camera : NetworkBehaviour {
 		}
 		NetworkLobbyManager.singleton.StopClient();
 	}
+
+	[Command]
+	void CmdFinished (GameObject winT)
+	{
+		Game_Manager.Instance().AddNb(winT);
+	}
+
+	void OnTriggerEnter (Collider other)
+	{
+		if (other.CompareTag("WinTrigger")){
+			CmdFinished(other.gameObject);
+		}
+	}
 }
