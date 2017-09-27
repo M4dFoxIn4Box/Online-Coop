@@ -12,7 +12,7 @@ public class Player_Camera : NetworkBehaviour {
 	
 	public override void OnStartLocalPlayer ()
 	{
-		
+		GetComponent<NetworkIdentity>().AssignClientAuthority(connectionToClient) ;
 		gameObject.tag = "Player" ;
 		CmdRegisterMe();			
 	}
