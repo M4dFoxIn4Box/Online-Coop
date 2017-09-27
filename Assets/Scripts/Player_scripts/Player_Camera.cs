@@ -35,6 +35,10 @@ public class Player_Camera : NetworkBehaviour {
 
 	[ClientRpc]
 	public void RpcQuitGame (){
+		if (isServer)
+		{
+			NetworkLobbyManager.singleton.StopMatchMaker();
+		}
 		NetworkLobbyManager.singleton.StopClient();
 	}
 }
