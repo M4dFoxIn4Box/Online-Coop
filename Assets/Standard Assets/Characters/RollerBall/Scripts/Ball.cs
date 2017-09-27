@@ -43,5 +43,13 @@ namespace UnityStandardAssets.Vehicles.Ball
                 m_Rigidbody.AddForce(Vector3.up*m_JumpPower, ForceMode.Impulse);
             }
         }
+
+     public void BoostOn (){
+        m_MovePower *= 10;
+    }
+
+    public void BoostOff (){
+        m_MovePower /= 10;
+    }
     }
 }
