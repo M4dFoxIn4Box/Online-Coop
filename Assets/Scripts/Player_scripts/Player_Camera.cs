@@ -8,11 +8,11 @@ public class Player_Camera : NetworkBehaviour {
 	void Awake()
 	{
 		DontDestroyOnLoad(gameObject) ;
+		GetComponent<NetworkIdentity>().AssignClientAuthority(connectionToClient) ;
 	}
 	
 	public override void OnStartLocalPlayer ()
 	{
-		GetComponent<NetworkIdentity>().AssignClientAuthority(connectionToClient) ;
 		gameObject.tag = "Player" ;
 		CmdRegisterMe();			
 	}
