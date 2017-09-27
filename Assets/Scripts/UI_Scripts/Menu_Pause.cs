@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
+using UnityStandardAssets.Vehicles.Ball ;
 
 	public class Menu_Pause : NetworkBehaviour {
 	
@@ -28,10 +29,11 @@ using UnityEngine.Networking;
     {
         isPause = !isPause;
         menuPause.SetActive(isPause);
+        GetComponent<BallUserControl>().SetPause(isPause) ;
     }
 
     public void QuitterPause()
     {
-        Game_Manager.Instance().CmdQuitGame() ;
+        Game_Manager.Instance().CmdQuitGame() ;             
     }
 }

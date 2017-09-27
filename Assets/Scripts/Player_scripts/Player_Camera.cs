@@ -5,8 +5,14 @@ using UnityEngine.Networking;
 
 public class Player_Camera : NetworkBehaviour {
 
+	void Awake()
+	{
+		DontDestroyOnLoad(gameObject) ;
+	}
+	
 	public override void OnStartLocalPlayer ()
 	{
+		
 		gameObject.tag = "Player" ;
 		CmdRegisterMe();			
 	}
