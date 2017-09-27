@@ -45,6 +45,7 @@ public class Game_Manager : NetworkBehaviour {
 
 	public void AddNb (GameObject trig){
 		nbToWin += 1;
+		Debug.Log(nbToWin);
 		// if (trig == winTriggers[0])
 		// {
 		// 	NetworkServer.UnSpawn(winTriggers[0]);
