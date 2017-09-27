@@ -32,6 +32,6 @@ using UnityEngine.Networking;
     [ClientRpc]
     public void RpcquitterPause ()
     {
-        NetworkManager.singleton.StopClient();
+        Game_Manager.Instance().CmdQuitGame() ;
     }
 }

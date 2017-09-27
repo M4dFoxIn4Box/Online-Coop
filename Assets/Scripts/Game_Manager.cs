@@ -72,4 +72,11 @@ public class Game_Manager : NetworkBehaviour {
 			NetworkServer.Spawn(winTriggers[1]);
 		}
 	}
+
+	[Command]
+	public void CmdQuitGame()
+	{
+		playerList[0].RpcQuitGame();
+		playerList[1].RpcQuitGame();
+	}
 }
