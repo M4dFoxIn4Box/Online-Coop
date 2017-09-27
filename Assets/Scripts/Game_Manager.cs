@@ -7,6 +7,7 @@ using UnityEngine.Networking ;
 public class Game_Manager : NetworkBehaviour {
 
 	private int nbToWin = 0;
+
 	public List<Player_Camera> playerList = new List<Player_Camera>();
 	public GameObject[] winTriggers;
 
@@ -78,5 +79,4 @@ public class Game_Manager : NetworkBehaviour {
 		playerList[0].RpcQuitGame();
 		playerList[1].RpcQuitGame();
 	}
-
 }
