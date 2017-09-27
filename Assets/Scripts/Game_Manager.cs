@@ -32,10 +32,10 @@ public class Game_Manager : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		// winTriggers[0].SetActive(true);
-		// winTriggers[1].SetActive(true);
-		// NetworkServer.Spawn(winTriggers[0]);
-		// NetworkServer.Spawn(winTriggers[1]);
+		winTriggers[0].SetActive(true);
+		winTriggers[1].SetActive(true);
+		NetworkServer.Spawn(winTriggers[0]);
+		NetworkServer.Spawn(winTriggers[1]);
 	}
 	
 	// Update is called once per frame
@@ -46,16 +46,16 @@ public class Game_Manager : NetworkBehaviour {
 	public void AddNb (GameObject trig){
 		nbToWin += 1;
 		Debug.Log(nbToWin);
-		// if (trig == winTriggers[0])
-		// {
-		// 	NetworkServer.UnSpawn(winTriggers[0]);
-		// 	winTriggers[0].SetActive(false);
-		// }
-		// if (trig == winTriggers[1])
-		// {
-		// 	NetworkServer.UnSpawn(winTriggers[1]);
-		// 	winTriggers[1].SetActive(false);
-		// }
+		if (trig == winTriggers[0])
+		{
+			NetworkServer.UnSpawn(winTriggers[0]);
+			winTriggers[0].SetActive(false);
+		}
+		if (trig == winTriggers[1])
+		{
+			NetworkServer.UnSpawn(winTriggers[1]);
+			winTriggers[1].SetActive(false);
+		}
 		if (nbToWin >= 2)
 		{
 			playerList[0].RpcQuitGame();

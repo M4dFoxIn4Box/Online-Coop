@@ -55,7 +55,7 @@ public class Player_Camera : NetworkBehaviour {
 	{
 		if (other.CompareTag("WinTrigger") && isLocalPlayer){
 			myPlayerControls.LockPlayer();
-			GetComponent<Rigidbody>().velocity = Vector3.zero;
+			GetComponent<Rigidbody>().isKinematic = true;
 			CmdFinished(other.gameObject);
 		}
 	}
