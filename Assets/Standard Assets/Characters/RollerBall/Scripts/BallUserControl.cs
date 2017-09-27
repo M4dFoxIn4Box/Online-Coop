@@ -1,4 +1,6 @@
 using System;
+//using System.Collections;
+//using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.Networking;
@@ -47,8 +49,8 @@ namespace UnityStandardAssets.Vehicles.Ball
                 return;
             }
             // Get the axis and jump input.
-            if(!isPaused)
-            {
+            //if(!Menu_Pause.Instance().ReturnPause())
+           // {
                 float h = CrossPlatformInputManager.GetAxis("Horizontal");
                 float v = CrossPlatformInputManager.GetAxis("Vertical");
                 jump = CrossPlatformInputManager.GetButton("Jump");
@@ -65,7 +67,7 @@ namespace UnityStandardAssets.Vehicles.Ball
                     // we use world-relative directions in the case of no main camera
                     move = (v*Vector3.forward + h*Vector3.right).normalized;
                 }
-            }
+            //}
         }
 
 

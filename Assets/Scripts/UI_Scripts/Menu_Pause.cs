@@ -3,14 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
-using UnityStandardAssets.Vehicles.Ball ;
 
-	public class Menu_Pause : NetworkBehaviour {
+public class Menu_Pause : NetworkBehaviour {
 	
 	public string Room;
 	private bool isPause = false;
 	public GameObject menuPause;
 
+	private static Menu_Pause instance;
+	public static Menu_Pause Instance () 
+    {
+    	return instance;
+    }
+
+    void Awake (){
+    	if (instance != null)
+        {
+            Destroy (gameObject);
+        }
+        else 
+        {
+            instance = this;
+        }
+    }
 	// Use this for initialization
 	void Start () {
 		
@@ -29,11 +44,15 @@ using UnityStandardAssets.Vehicles.Ball ;
     {
         isPause = !isPause;
         menuPause.SetActive(isPause);
-        GetComponent<BallUserControl>().SetPause(isPause) ;
     }
 
     public void QuitterPause()
     {
         Game_Manager.Instance().CmdQuitGame() ;             
+    }
+
+    public bool ReturnPause()
+    {
+    	 return isPause ;
     }
 }
