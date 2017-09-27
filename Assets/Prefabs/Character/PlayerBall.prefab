@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc1e317d40b4c3498fede0294f85fe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myPlayerControls: {fileID: 114664814653929488}
 --- !u!114 &114326944261747760
 MonoBehaviour:
   m_ObjectHideFlags: 1

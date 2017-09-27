@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityStandardAssets.Vehicles.Ball;
 
 public class Player_Camera : NetworkBehaviour {
+
+	public BallUserControl myPlayerControls;
 
 	void Awake()
 	{
@@ -51,6 +54,7 @@ public class Player_Camera : NetworkBehaviour {
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.CompareTag("WinTrigger") && isLocalPlayer){
+			myPlayerControls.LockPlayer();
 			CmdFinished(other.gameObject);
 		}
 	}

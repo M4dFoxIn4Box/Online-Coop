@@ -11,14 +11,13 @@ namespace UnityStandardAssets.Vehicles.Ball
     {
         private Ball ball; // Reference to the ball controller.
 
-        private bool isPaused = false ;
-
         private Vector3 move;
         // the world-relative desired move direction, calculated from the camForward and user input.
 
         private Transform cam; // A reference to the main camera in the scenes transform
         private Vector3 camForward; // The current forward direction of the camera
         private bool jump; // whether the jump button is currently pressed
+        private bool isLocked = false;
 
 
         private void Awake()
@@ -49,8 +48,8 @@ namespace UnityStandardAssets.Vehicles.Ball
                 return;
             }
             // Get the axis and jump input.
-            //if(!Menu_Pause.Instance().ReturnPause())
-           // {
+            if (!isLocked)
+            {
                 float h = CrossPlatformInputManager.GetAxis("Horizontal");
                 float v = CrossPlatformInputManager.GetAxis("Vertical");
                 jump = CrossPlatformInputManager.GetButton("Jump");
@@ -67,7 +66,7 @@ namespace UnityStandardAssets.Vehicles.Ball
                     // we use world-relative directions in the case of no main camera
                     move = (v*Vector3.forward + h*Vector3.right).normalized;
                 }
-            //}
+            }
         }
 
 
@@ -82,9 +81,14 @@ namespace UnityStandardAssets.Vehicles.Ball
             jump = false;
         }
 
-        public void SetPause(bool statut)
+        public void LockPlayer()
         {
-            isPaused = statut ;
+            isLocked = true ;
+        }
+
+        public void UnlockPlayer()
+        {
+            isLocked = false ;
         }
     }
 }
