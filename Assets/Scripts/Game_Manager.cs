@@ -32,10 +32,12 @@ public class Game_Manager : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		winTriggers[0].SetActive(true);
-		winTriggers[1].SetActive(true);
-		NetworkServer.Spawn(winTriggers[0]);
-		NetworkServer.Spawn(winTriggers[1]);
+		if (isServer){
+			winTriggers[0].SetActive(true);
+			winTriggers[1].SetActive(true);
+			NetworkServer.Spawn(winTriggers[0]);
+			NetworkServer.Spawn(winTriggers[1]);
+		}
 	}
 	
 	// Update is called once per frame
