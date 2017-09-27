@@ -76,6 +76,7 @@ public class Game_Manager : NetworkBehaviour {
 	[Command]
 	public void CmdQuitGame()
 	{
+		Debug.Log("Cliennnnt");
 		playerList[0].RpcQuitGame();
 		playerList[1].RpcQuitGame();
 	}
