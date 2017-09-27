@@ -103,6 +103,7 @@ public class Game_Manager : NetworkBehaviour {
 		{
 			if(toSpawn == spawnList[o])
 			{
+				spawnList[o].SetActive(true);
 				NetworkServer.Spawn(spawnList[o]);
 			}
 		}

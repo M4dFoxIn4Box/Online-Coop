@@ -9,6 +9,7 @@ TagManager:
   - WinTrigger
   - TutoMoves
   - TutoJump
+  - PressionPlate
   layers:
   - Default
   - TransparentFX
