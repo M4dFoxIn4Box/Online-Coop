@@ -51,12 +51,23 @@ public class Player_Camera : NetworkBehaviour {
 		Game_Manager.Instance().AddNb(winT);
 	}
 
+	[Command]
+	void CmdSpawnSomething(GameObject myObject)
+	{
+		Game_Manager.Instance().SpawnAnObject(myObject);
+	}
+
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.CompareTag("WinTrigger") && isLocalPlayer){
 			myPlayerControls.LockPlayer();
 			GetComponent<Rigidbody>().isKinematic = true;
 			CmdFinished(other.gameObject);
+		}
+
+		if(other.CompareTag("PressionPlate") && isLocalPlayer)
+		{
+			CmdSpawnSomething(other.transform.gameObject.GetComponent<Pression_Trigger>().plateformActive) ;
 		}
 	}
 }

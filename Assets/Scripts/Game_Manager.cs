@@ -9,6 +9,7 @@ public class Game_Manager : NetworkBehaviour {
 	private int nbToWin = 0;
 
 	public List<Player_Camera> playerList = new List<Player_Camera>();
+	public List<GameObject> spawnList = new List<GameObject>() ;
 	public GameObject[] winTriggers;
 
 
@@ -37,6 +38,11 @@ public class Game_Manager : NetworkBehaviour {
 			winTriggers[1].SetActive(true);
 			NetworkServer.Spawn(winTriggers[0]);
 			NetworkServer.Spawn(winTriggers[1]);
+
+			for(int i = 0 ; i < spawnList.Count ; i++)
+			{
+				spawnList[i].SetActive(false) ;
+			} 
 		}
 	}
 	
@@ -78,6 +84,11 @@ public class Game_Manager : NetworkBehaviour {
 		}
 	}
 
+	public void RegisterObject(GameObject objectRegister)
+	{
+		spawnList.Add(objectRegister) ;
+	}
+
 	[Command]
 	public void CmdQuitGame()
 	{
@@ -86,15 +97,14 @@ public class Game_Manager : NetworkBehaviour {
 		playerList[1].RpcQuitGame();
 	}
 
-	[Command]
-	public void CmdActivatePlateform (GameObject plateformActive){
-		plateformActive.SetActive(true);
-		NetworkServer.Spawn(plateformActive);
-	}
-
-	[Command]
-	public void CmdStopPlateform (GameObject plateformActive){
-		plateformActive.SetActive(false);
-		NetworkServer.UnSpawn(plateformActive);
+	public void SpawnAnObject(GameObject toSpawn)
+	{
+		for(int o = 0 ; o < spawnList.Count ; o++)
+		{
+			if(toSpawn == spawnList[o])
+			{
+				NetworkServer.Spawn(spawnList[o]);
+			}
+		}
 	}
 }

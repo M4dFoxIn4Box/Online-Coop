@@ -25,8 +25,6 @@ public class Menu_Pause : NetworkBehaviour {
         {
             instance = this;
         }
-
-        DontDestroyOnLoad(menuPause.gameObject) ;
     }
 	// Use this for initialization
 	void Start () {
