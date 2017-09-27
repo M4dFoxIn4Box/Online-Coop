@@ -482,7 +482,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114732751715270986}
-        m_MethodName: QuitterPause
+        m_MethodName: RpcquitterPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
