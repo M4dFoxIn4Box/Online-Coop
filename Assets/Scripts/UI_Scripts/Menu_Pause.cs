@@ -29,8 +29,9 @@ using UnityEngine.Networking;
         isPause = !isPause;
         menuPause.SetActive(isPause);
     }
-    [ClientRpc]
-    public void RpcquitterPause ()
+
+    [Command]
+    public void CmdquitterPause ()
     {
         Game_Manager.Instance().CmdQuitGame() ;
     }
