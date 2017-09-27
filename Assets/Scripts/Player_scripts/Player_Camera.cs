@@ -50,7 +50,7 @@ public class Player_Camera : NetworkBehaviour {
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.CompareTag("WinTrigger")){
+		if (other.CompareTag("WinTrigger") && isLocalPlayer){
 			CmdFinished(other.gameObject);
 		}
 	}

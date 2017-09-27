@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4333080485883344}
+  - component: {fileID: 114667930001347240}
   m_Layer: 0
   m_Name: Plaque pression
   m_TagString: Untagged
@@ -36,7 +37,6 @@ GameObject:
   - component: {fileID: 4187899192736036}
   - component: {fileID: 65181023500840524}
   - component: {fileID: 114597889725562010}
-  - component: {fileID: 114321771417397774}
   m_Layer: 0
   m_Name: Pression_Trigger
   m_TagString: Untagged
@@ -55,7 +55,6 @@ GameObject:
   - component: {fileID: 33030223115931732}
   - component: {fileID: 65483902900586730}
   - component: {fileID: 23789484009370680}
-  - component: {fileID: 114357002621849686}
   m_Layer: 0
   m_Name: Plaque 3D
   m_TagString: Untagged
@@ -167,70 +166,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114321771417397774
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1449082065252284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 171
-    i1: 131
-    i2: 233
-    i3: 234
-    i4: 84
-    i5: 27
-    i6: 176
-    i7: 132
-    i8: 27
-    i9: 130
-    i10: 138
-    i11: 78
-    i12: 219
-    i13: 48
-    i14: 87
-    i15: 213
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
---- !u!114 &114357002621849686
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1450587435488248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 171
-    i1: 131
-    i2: 233
-    i3: 234
-    i4: 84
-    i5: 27
-    i6: 176
-    i7: 132
-    i8: 27
-    i9: 130
-    i10: 138
-    i11: 78
-    i12: 219
-    i13: 48
-    i14: 87
-    i15: 213
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!114 &114597889725562010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,3 +178,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plateformActive: {fileID: 0}
+--- !u!114 &114667930001347240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1385658812308280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
