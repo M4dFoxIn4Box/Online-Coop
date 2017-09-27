@@ -1808,6 +1808,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1712943617172936, guid: b3ec6daa72406bf40985cafcc593fcb2, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3ec6daa72406bf40985cafcc593fcb2, type: 2}
   m_IsPrefabParent: 0
@@ -6704,6 +6708,10 @@ Prefab:
       propertyPath: closestDistance
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1342740451482938, guid: 22e2c005d569d6f468e7ea7ea66e67d5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22e2c005d569d6f468e7ea7ea66e67d5, type: 2}
   m_IsPrefabParent: 0
@@ -7282,7 +7290,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1712943617172936, guid: b3ec6daa72406bf40985cafcc593fcb2, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1712943617172936, guid: b3ec6daa72406bf40985cafcc593fcb2, type: 2}
       propertyPath: m_TagString
