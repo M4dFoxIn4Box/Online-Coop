@@ -9,6 +9,7 @@ public class MyLobbyManager : NetworkLobbyManager  {
 	private int nbToWin = 0;
 
 	public List<Player_Camera> playerList = new List<Player_Camera>();
+	private bool launchedClient = false;
 
 	private static MyLobbyManager instance;
     public static MyLobbyManager Instance () 
@@ -56,8 +57,8 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		playerList[1].RpcQuitGame();
 	}
 
-	public override void OnLobbyServerSceneChanged (string scName){
-		playerList[0].RpcGoTo(NetworkLobbyManager.singleton.startPositions[0].gameObject);
-		playerList[1].RpcGoTo(NetworkLobbyManager.singleton.startPositions[1].gameObject);
-	}
+	// public override void OnLobbyServerSceneChanged (string scName){
+	// 	playerList[0].RpcGoTo(NetworkLobbyManager.singleton.startPositions[0].gameObject);
+	// 	playerList[1].RpcGoTo(NetworkLobbyManager.singleton.startPositions[1].gameObject);
+	// }
 }
