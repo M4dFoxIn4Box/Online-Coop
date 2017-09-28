@@ -41,14 +41,13 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		Debug.Log(nbToWin);
 		if (nbToWin >= 2)
 		{
-			NetworkLobbyManager.singleton.ServerChangeScene("Scene_Online2");
+			QuitGame();
+			// NetworkLobbyManager.singleton.ServerChangeScene("Scene_Online2");
 		}
 	}
 
 	public void AddPlayer (Player_Camera playerScript){
 		playerList.Add(playerScript);
-		Debug.Log (NetworkLobbyManager.singleton.startPositions[0].position);
-		Debug.Log (NetworkLobbyManager.singleton.startPositions[1].position);
 	}
 
 	public void QuitGame()

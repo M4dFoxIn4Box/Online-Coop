@@ -62,8 +62,8 @@ public class Player_Camera : NetworkBehaviour {
 
 	[ClientRpc]
 	public void RpcGoTo(GameObject pos){
+		Debug.Log (pos.name);
 		if (isLocalPlayer){
-			Debug.Log (pos.name);
 			transform.position = pos.transform.position;
 		}
 	}
