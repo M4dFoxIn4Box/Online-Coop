@@ -42,8 +42,8 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		Debug.Log(nbToWin);
 		if (nbToWin >= 2)
 		{
-			QuitGame();
-			// NetworkLobbyManager.singleton.ServerChangeScene("Scene_Online2");
+			// QuitGame();
+			NetworkLobbyManager.singleton.ServerChangeScene("Scene_Online2");
 		}
 	}
 
@@ -57,8 +57,8 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		playerList[1].RpcQuitGame();
 	}
 
-	// public override void OnLobbyServerSceneChanged (string scName){
-	// 	playerList[0].RpcGoTo(NetworkLobbyManager.singleton.startPositions[0].gameObject);
-	// 	playerList[1].RpcGoTo(NetworkLobbyManager.singleton.startPositions[1].gameObject);
-	// }
+	public override void OnLobbyServerSceneChanged (string scName){
+		playerList[0].RpcGoTo(NetworkLobbyManager.singleton.startPositions[0].gameObject);
+		playerList[1].RpcGoTo(NetworkLobbyManager.singleton.startPositions[1].gameObject);
+	}
 }
