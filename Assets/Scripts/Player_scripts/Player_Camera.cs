@@ -62,15 +62,10 @@ public class Player_Camera : NetworkBehaviour {
 
 	[ClientRpc]
 	public void RpcGoTo(GameObject pos){
-		if (isServer)
-		{
-			MyLobbyManager.singleton.StopMatchMaker();
+		Debug.Log (pos.name);
+		if (isLocalPlayer){
+			transform.position = pos.transform.position;
 		}
-		MyLobbyManager.singleton.StopClient();
-		// Debug.Log (pos.name);
-		// if (isLocalPlayer){
-		// 	transform.position = pos.transform.position;
-		// }
 	}
 
 	[Command]

@@ -64,10 +64,15 @@ public class MyLobbyManager : NetworkLobbyManager  {
 			Debug.Log ("you");
 			if (playerList.Count > 0)
 			{
-				Debug.Log ("pi");
-				playerList[0].RpcGoTo(NetworkLobbyManager.singleton.startPositions[0].gameObject);
-				playerList[1].RpcGoTo(NetworkLobbyManager.singleton.startPositions[1].gameObject);
+				StartCoroutine("Test");
 			}
 		}
+	}
+
+	public IEnumerator Test ()
+	{
+		yield return new WaitForSeconds (1.2f);
+		playerList[0].RpcGoTo(startPositions[0].gameObject);
+		playerList[1].RpcGoTo(startPositions[1].gameObject);
 	}
 }
