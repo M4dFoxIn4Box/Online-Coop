@@ -58,8 +58,6 @@ public class MyLobbyManager : NetworkLobbyManager  {
 	}
 
 	public override void OnLobbyServerSceneChanged (string scName){
-		Debug.Log (NetworkLobbyManager.singleton.startPositions[0].position);
-		Debug.Log (NetworkLobbyManager.singleton.startPositions[1].position);
 		playerList[0].RpcGoTo(NetworkLobbyManager.singleton.startPositions[0].gameObject);
 		playerList[1].RpcGoTo(NetworkLobbyManager.singleton.startPositions[1].gameObject);
 	}
