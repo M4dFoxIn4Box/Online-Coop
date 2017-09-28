@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
+using UnityEngine.UI ;
 
 public class Menu_Pause : NetworkBehaviour {
 	
 	public string Room;
 	private bool isPause = false;
 	public GameObject menuPause;
+
+    public List<Sprite> iconList = new List<Sprite>() ;
+    public Image demandIcon ;
+    public Image helpIcon ;
 
 	private static Menu_Pause instance;
 	public static Menu_Pause Instance () 
@@ -44,6 +49,18 @@ public class Menu_Pause : NetworkBehaviour {
     {
         isPause = !isPause;
         menuPause.SetActive(isPause);
+    }
+
+    public void DisplayActiveKey(int idx)
+    {
+        demandIcon.sprite = iconList[idx] ;
+        demandIcon.gameObject.SetActive(true) ;
+    }
+
+   public void DisplayIconToHelp()
+    {
+        helpIcon.sprite = iconList[Random.Range(0,3)] ;
+        helpIcon.gameObject.SetActive(true) ;
     }
 
     public void QuitterPause()
