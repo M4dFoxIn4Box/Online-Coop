@@ -8,6 +8,7 @@ public class MyLobbyManager : NetworkLobbyManager  {
 	private int nbToWin = 0;
 
 	public List<Player_Camera> playerList = new List<Player_Camera>();
+	public List<Transform> startPositions = new List <Transform>();
 	public GameObject[] winTriggers;
 
 	private static MyLobbyManager instance;
@@ -75,5 +76,10 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		//Debug.Log("Cliennnnt");
 		playerList[0].RpcQuitGame();
 		playerList[1].RpcQuitGame();
+	}
+
+	public void OnServerChangeScene(){
+		playerList[0].RpcGoTo(startPositions[0].gameObject);
+		playerList[1].RpcGoTo(startPositions[1].gameObject);
 	}
 }
