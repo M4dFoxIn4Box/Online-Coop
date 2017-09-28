@@ -67,8 +67,9 @@ public class Game_Manager : NetworkBehaviour {
 		}
 		if (nbToWin >= 2)
 		{
-			playerList[0].RpcQuitGame();
-			playerList[1].RpcQuitGame();
+			NetworkLobbyManager.singleton.ServerChangeScene("Luc_Test");
+			/*playerList[0].RpcQuitGame();
+			playerList[1].RpcQuitGame();*/
 		}
 		
 		Debug.Log(nbToWin);
