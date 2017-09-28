@@ -1081,9 +1081,31 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114732751715270986, guid: c9aae85f878f93548b8e1b0973b78bf8,
+        type: 2}
+      propertyPath: demandIcon
+      value: 
+      objectReference: {fileID: 325881875}
+    - target: {fileID: 114732751715270986, guid: c9aae85f878f93548b8e1b0973b78bf8,
+        type: 2}
+      propertyPath: helpIcon
+      value: 
+      objectReference: {fileID: 325881874}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9aae85f878f93548b8e1b0973b78bf8, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &325881874 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114971619513294728, guid: c9aae85f878f93548b8e1b0973b78bf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 325881873}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &325881875 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114683455517629834, guid: c9aae85f878f93548b8e1b0973b78bf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 325881873}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &326854557
 Prefab:
   m_ObjectHideFlags: 0
