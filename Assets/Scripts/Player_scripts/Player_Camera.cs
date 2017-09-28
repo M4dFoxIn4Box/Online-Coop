@@ -66,6 +66,7 @@ public class Player_Camera : NetworkBehaviour {
 		if (isLocalPlayer){
 			transform.position = pos.transform.position;
 			GetComponent<Rigidbody>().isKinematic = false;
+			myPlayerControls.UnlockPlayer();
 		}
 	}
 
