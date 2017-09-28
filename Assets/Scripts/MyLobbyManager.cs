@@ -41,7 +41,7 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		Debug.Log(nbToWin);
 		if (nbToWin >= 2)
 		{
-			NetworkLobbyManager.singleton.ServerChangeScene("Scene_Online2");
+			NetworkLobbyManager.singleton.ServerChangeScene("Scene_Online3");
 		}
 	}
 
@@ -62,6 +62,7 @@ public class MyLobbyManager : NetworkLobbyManager  {
 			if (playerList.Count > 0)
 			{
 				StartCoroutine("Test");
+				nbToWin = 0;
 			}
 		}
 	}
