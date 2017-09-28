@@ -7,11 +7,13 @@ using UnityEngine.Networking;
 public class MyLobbyManager : NetworkLobbyManager  {
 
 	private int nbToWin = 0;
+	public string[] sceneBoard;
+	private int currentSceneIndex = 1 ;
 
 	public List<Player_Camera> playerList = new List<Player_Camera>();
 
 	private static MyLobbyManager instance;
-    public static MyLobbyManager Instance () 
+    public static MyLobbyManager Instance ()
     {
         return instance;
     }
@@ -36,24 +38,13 @@ public class MyLobbyManager : NetworkLobbyManager  {
 
 	}
 
-	public void SendHelpRequest(GameObject playerGo)
-	{
-		if(playerGo == playerList[0].gameObject)
-		{
-			playerList[1].RpcIconToHelp() ;
-		}
-		else if(playerGo == playerList[1].gameObject)
-		{
-			playerList[0].RpcIconToHelp() ;
-		}
-	}
-
 	public void AddNb (){
 		nbToWin += 1;
 		Debug.Log(nbToWin);
 		if (nbToWin >= 2)
 		{
-			NetworkLobbyManager.singleton.ServerChangeScene("Scene_Online3");
+			currentSceneIndex++ ;
+			NetworkLobbyManager.singleton.ServerChangeScene(sceneBoard[currentSceneIndex]);
 		}
 	}
 
