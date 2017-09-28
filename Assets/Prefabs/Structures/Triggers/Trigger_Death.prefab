@@ -21,8 +21,6 @@ GameObject:
   - component: {fileID: 4874979624280194}
   - component: {fileID: 65345850472447782}
   - component: {fileID: 114810070194024172}
-  - component: {fileID: 114443453734149426}
-  - component: {fileID: 114004930344701412}
   m_Layer: 0
   m_Name: Trigger_Death
   m_TagString: Untagged
@@ -36,9 +34,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1316244228931854}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -143.25056, y: 209.70058, z: -24.297977}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -16.8, z: 66.762}
+  m_LocalScale: {x: 2.3713386, y: 1, z: 1.9961205}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53,61 +51,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 109.67285, y: 2.484375, z: 116.03906}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114004930344701412
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1316244228931854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
---- !u!114 &114443453734149426
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1316244228931854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 108
-    i1: 10
-    i2: 176
-    i3: 78
-    i4: 62
-    i5: 206
-    i6: 206
-    i7: 148
-    i8: 217
-    i9: 246
-    i10: 146
-    i11: 30
-    i12: 16
-    i13: 157
-    i14: 231
-    i15: 242
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
+  m_Size: {x: 200, y: 2.484375, z: 334.04248}
+  m_Center: {x: 0, y: 0, z: -67.02124}
 --- !u!114 &114810070194024172
 MonoBehaviour:
   m_ObjectHideFlags: 1
