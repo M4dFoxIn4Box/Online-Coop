@@ -33,28 +33,22 @@ public class Player_Camera : NetworkBehaviour {
 
 	[Command]
 	void CmdRegisterMe (){
-		Game_Manager.Instance().AddPlayer(this);
+		MyLobbyManager.Instance().AddPlayer(this);
 	}
 
 	[ClientRpc]
 	public void RpcQuitGame (){
 		if (isServer)
 		{
-			NetworkLobbyManager.singleton.StopMatchMaker();
+			MyLobbyManager.singleton.StopMatchMaker();
 		}
-		NetworkLobbyManager.singleton.StopClient();
+		MyLobbyManager.singleton.StopClient();
 	}
 
 	[Command]
 	void CmdFinished (GameObject winT)
 	{
-		Game_Manager.Instance().AddNb(winT);
-	}
-
-	[Command]
-	void CmdSpawnSomething(GameObject myObject)
-	{
-		Game_Manager.Instance().SpawnAnObject(myObject);
+		MyLobbyManager.Instance().AddNb(winT);
 	}
 
 	void OnTriggerEnter (Collider other)
@@ -67,7 +61,6 @@ public class Player_Camera : NetworkBehaviour {
 
 		if(other.CompareTag("PressionPlate") && isLocalPlayer)
 		{
-			CmdSpawnSomething(other.transform.gameObject.GetComponent<Pression_Trigger>().plateformActive) ;
 			Debug.Log("plate") ;
 		}
 	}
