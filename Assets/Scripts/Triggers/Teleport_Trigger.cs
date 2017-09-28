@@ -25,9 +25,22 @@ public class Teleport_Trigger : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerExit(Collider other)
+	{
+		if(other.CompareTag("Player"))
+		{
+			HideIcon() ;
+		}
+	}
+
 	void IconToDisplay()
 	{
-		 Debug.Log("IconToD") ;
+		Debug.Log("IconToD") ;
 		Menu_Pause.Instance().DisplayActiveKey(Random.Range(0,3)) ;
+	}
+
+	void HideIcon()
+	{
+		Menu_Pause.Instance().HideActiveKey() ;
 	}
 }
