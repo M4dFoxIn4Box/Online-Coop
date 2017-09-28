@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
 public class MyLobbyManager : NetworkLobbyManager  {
@@ -52,7 +53,7 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		}
 		if (nbToWin >= 2)
 		{
-			NetworkLobbyManager.singleton.ServerChangeScene("Luc_Test");
+			NetworkLobbyManager.singleton.ServerChangeScene("Scene_Online2");
 			/*playerList[0].RpcQuitGame();
 			playerList[1].RpcQuitGame();*/
 		}
