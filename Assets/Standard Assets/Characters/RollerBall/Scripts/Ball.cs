@@ -12,13 +12,22 @@ namespace UnityStandardAssets.Vehicles.Ball
 
         private const float k_GroundRayLength = 1f; // The length of the ray to check if the ball is grounded.
         private Rigidbody m_Rigidbody;
+        public float cdInitial;
+        private float cdActive;
+        private bool boostOff = false;
+        public float boostMultiplier;
 
 
         private void Start()
         {
+            cdActive = cdInitial;
             m_Rigidbody = GetComponent<Rigidbody>();
             // Set the maximum angular velocity.
             GetComponent<Rigidbody>().maxAngularVelocity = m_MaxAngularVelocity;
+        }
+
+        void Update (){
+            BoostCooldown ();
         }
 
 
@@ -45,11 +54,31 @@ namespace UnityStandardAssets.Vehicles.Ball
         }
 
      public void BoostOn (){
-        m_MovePower *= 10;
+     	if (boostOff == false){
+        m_MovePower *= boostMultiplier;
+    }
+        cdActive = cdInitial;
+
     }
 
-    public void BoostOff (){
-        m_MovePower /= 10;
+    void BoostOff (){
+        m_MovePower /= boostMultiplier;
+        cdActive = cdInitial;
+        boostOff = false;
     }
+    public void BoostBoolCooldown (){
+        if (cdActive == cdInitial && boostOff == false){
+        	boostOff = true;
+        }
     }
+    public void BoostCooldown (){
+    	if (boostOff == true){
+            cdActive -= Time.deltaTime;
+    	}
+        if (cdActive <= 0)
+        {
+            BoostOff(); 
+        }
+    }
+}
 }

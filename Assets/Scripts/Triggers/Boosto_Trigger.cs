@@ -29,7 +29,7 @@ public class Boosto_Trigger : MonoBehaviour {
 	{
 		if(other.CompareTag("Player"))
 		{
-			other.GetComponent<Ball>().BoostOff(); 
+			other.GetComponent<Ball>().BoostBoolCooldown(); 
 		}
 	}
 }
