@@ -85,23 +85,25 @@ public class Game_Manager : NetworkBehaviour {
 		}
 	}
 
-	[Command]
-	public void CmdQuitGame()
-	{
-		Debug.Log("Cliennnnt");
-		playerList[0].RpcQuitGame();
-		playerList[1].RpcQuitGame();
-	}
-
 	public void SpawnAnObject(GameObject toSpawn)
 	{
 		for(int o = 0 ; o < spawnList.Count ; o++)
 		{
 			if(toSpawn == spawnList[o])
 			{
-				NetworkServer.Spawn(spawnList[o]);
 				spawnList[o].SetActive(true);
+				NetworkServer.Spawn(spawnList[o]);
 			}
 		}
 	}
+
+	[Command]
+	public void CmdQuitGame()
+	{
+		//Debug.Log("Cliennnnt");
+		playerList[0].RpcQuitGame();
+		playerList[1].RpcQuitGame();
+	}
+
+	
 }
