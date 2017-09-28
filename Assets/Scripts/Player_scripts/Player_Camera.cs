@@ -67,4 +67,19 @@ public class Player_Camera : NetworkBehaviour {
 			transform.position = pos.transform.position;
 		}
 	}
+
+	[Command]
+	public void CmdAskForHelp(GameObject ply)
+	{	
+		//MyLobbyManager.Instance().SendHelpRequest(ply) ;
+	}
+
+	[ClientRpc]
+	public void RpcIconToHelp()
+	{
+		if(isLocalPlayer)
+		{
+			Menu_Pause.Instance().DisplayIconToHelp() ;
+		}
+	}
 }
