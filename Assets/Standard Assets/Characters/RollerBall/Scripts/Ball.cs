@@ -27,7 +27,7 @@ namespace UnityStandardAssets.Vehicles.Ball
         }
 
         void Update (){
-            BoostCooldown ();
+            //BoostCooldown ();
         }
 
 
@@ -53,7 +53,7 @@ namespace UnityStandardAssets.Vehicles.Ball
             }
         }
 
-     public void BoostOn (){
+     /*public void BoostOn (){
      	if (boostOff == false){
         m_MovePower *= boostMultiplier;
     }
@@ -79,6 +79,6 @@ namespace UnityStandardAssets.Vehicles.Ball
         {
             BoostOff(); 
         }
-    }
+    }*/
 }
 }

@@ -5,7 +5,7 @@ using UnityStandardAssets.Vehicles.Ball;
 
 public class Boosto_Trigger : MonoBehaviour {
 
-	public GameObject playerObject;
+	/*public GameObject playerObject;
 
 	// Use this for initialization
 	void Start () {
@@ -31,5 +31,5 @@ public class Boosto_Trigger : MonoBehaviour {
 		{
 			other.GetComponent<Ball>().BoostBoolCooldown(); 
 		}
-	}
+	}*/
 }
