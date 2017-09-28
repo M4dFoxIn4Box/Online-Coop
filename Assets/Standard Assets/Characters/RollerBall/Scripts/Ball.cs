@@ -12,7 +12,7 @@ namespace UnityStandardAssets.Vehicles.Ball
 
         private const float k_GroundRayLength = 1f; // The length of the ray to check if the ball is grounded.
         private Rigidbody m_Rigidbody;
-        public float cdInitial;
+        public float cdInitial = 10 ;
         private float cdActive;
         private bool boostOff = false;
         public float boostMultiplier;
