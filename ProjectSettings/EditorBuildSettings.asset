@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test_Scenes/Killian_Test_2.unity
     guid: f158a44452305f840852f5aa6eb552be
+  - enabled: 1
+    path: Assets/Scenes/Test_Scenes/Luc_Test.unity
+    guid: 23653e61b0a6b2540be9c5068f257f9c
