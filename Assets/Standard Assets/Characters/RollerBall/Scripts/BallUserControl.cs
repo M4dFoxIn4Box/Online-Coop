@@ -25,6 +25,16 @@ namespace UnityStandardAssets.Vehicles.Ball
             // Set up the reference.
             ball = GetComponent<Ball>();
 
+        }
+
+
+        private void Update()
+        {
+
+            if (!isLocalPlayer)
+            {
+                return;
+            }
 
             // get the transform of the main camera
             if (Camera.main != null)
@@ -37,16 +47,7 @@ namespace UnityStandardAssets.Vehicles.Ball
                     "Warning: no main camera found. Ball needs a Camera tagged \"MainCamera\", for camera-relative controls.");
                 // we use world-relative controls in this case, which may not be what the user wants, but hey, we warned them!
             }
-        }
-
-
-        private void Update()
-        {
-
-            if (!isLocalPlayer)
-            {
-                return;
-            }
+            
             // Get the axis and jump input.
             if (!isLocked)
             {

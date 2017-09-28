@@ -62,7 +62,6 @@ public class Player_Camera : NetworkBehaviour {
 
 	[ClientRpc]
 	public void RpcGoTo(GameObject pos){
-		Debug.Log (pos.name);
 		if (isLocalPlayer){
 			transform.position = pos.transform.position;
 			GetComponent<Rigidbody>().isKinematic = false;

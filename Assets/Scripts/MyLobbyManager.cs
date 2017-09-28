@@ -9,7 +9,6 @@ public class MyLobbyManager : NetworkLobbyManager  {
 	private int nbToWin = 0;
 
 	public List<Player_Camera> playerList = new List<Player_Camera>();
-	private bool launchedClient = false;
 
 	private static MyLobbyManager instance;
     public static MyLobbyManager Instance () 
@@ -42,7 +41,6 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		Debug.Log(nbToWin);
 		if (nbToWin >= 2)
 		{
-			// QuitGame();
 			NetworkLobbyManager.singleton.ServerChangeScene("Scene_Online2");
 		}
 	}
@@ -61,7 +59,6 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		
 		if (scName != "Scene_Online")
 		{
-			Debug.Log ("you");
 			if (playerList.Count > 0)
 			{
 				StartCoroutine("Test");
