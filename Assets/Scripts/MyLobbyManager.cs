@@ -36,6 +36,18 @@ public class MyLobbyManager : NetworkLobbyManager  {
 
 	}
 
+	public void SendHelpRequest(GameObject playerGo)
+	{
+		if(playerGo == playerList[0].gameObject)
+		{
+			playerList[1].RpcIconToHelp() ;
+		}
+		else if(playerGo == playerList[1].gameObject)
+		{
+			playerList[0].RpcIconToHelp() ;
+		}
+	}
+
 	public void AddNb (){
 		nbToWin += 1;
 		Debug.Log(nbToWin);

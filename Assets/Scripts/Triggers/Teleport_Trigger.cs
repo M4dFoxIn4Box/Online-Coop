@@ -28,6 +28,5 @@ public class Teleport_Trigger : MonoBehaviour {
 	void IconToDisplay()
 	{
 		Menu_Pause.Instance().DisplayActiveKey(Random.Range(0,3)) ;
-
 	}
 }

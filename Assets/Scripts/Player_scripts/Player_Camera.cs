@@ -72,7 +72,7 @@ public class Player_Camera : NetworkBehaviour {
 	[Command]
 	public void CmdAskForHelp(GameObject ply)
 	{	
-		//MyLobbyManager.Instance().SendHelpRequest(ply) ;
+		MyLobbyManager.Instance().SendHelpRequest(ply) ;
 	}
 
 	[ClientRpc]
