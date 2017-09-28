@@ -205,7 +205,7 @@ MonoBehaviour:
   m_UseTorque: 0
   m_MaxAngularVelocity: 25
   m_JumpPower: 3
-  cdInitial: 0
+  cdInitial: 3
   boostMultiplier: 3
 --- !u!135 &135394672273196932
 SphereCollider:
