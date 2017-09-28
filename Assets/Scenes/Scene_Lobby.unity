@@ -235,9 +235,7 @@ MonoBehaviour:
   lobbySlots: []
   playerList: []
   startPositions: []
-  winTriggers:
-  - {fileID: 0}
-  - {fileID: 0}
+  winTriggers: []
 --- !u!4 &69132533
 Transform:
   m_ObjectHideFlags: 0
