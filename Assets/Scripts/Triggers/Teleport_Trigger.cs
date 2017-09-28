@@ -27,6 +27,7 @@ public class Teleport_Trigger : MonoBehaviour {
 
 	void IconToDisplay()
 	{
-		Menu_Pause.Instance().DisplayActiveKey(Random.Range(0,2)) ;
+		 Debug.Log("IconToD") ;
+		Menu_Pause.Instance().DisplayActiveKey(Random.Range(0,3)) ;
 	}
 }

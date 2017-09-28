@@ -53,13 +53,14 @@ public class Menu_Pause : NetworkBehaviour {
 
     public void DisplayActiveKey(int idx)
     {
+        Debug.Log("activeKey") ;
         demandIcon.sprite = iconList[idx] ;
         demandIcon.gameObject.SetActive(true) ;
     }
 
    public void DisplayIconToHelp()
     {
-        helpIcon.sprite = iconList[Random.Range(0,2)] ;
+        helpIcon.sprite = iconList[Random.Range(0,3)] ;
         helpIcon.gameObject.SetActive(true) ;
     }
 
