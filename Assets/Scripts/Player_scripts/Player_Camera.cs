@@ -48,7 +48,10 @@ public class Player_Camera : NetworkBehaviour {
 	[Command]
 	void CmdFinished (GameObject winT)
 	{
-		MyLobbyManager.Instance().AddNb(winT);
+		if (isLocalPlayer)
+		{
+			MyLobbyManager.Instance().AddNb(winT);
+		}
 	}
 
 	void OnTriggerEnter (Collider other)
@@ -57,11 +60,6 @@ public class Player_Camera : NetworkBehaviour {
 			myPlayerControls.LockPlayer();
 			GetComponent<Rigidbody>().isKinematic = true;
 			CmdFinished(other.gameObject);
-		}
-
-		if(other.CompareTag("PressionPlate") && isLocalPlayer)
-		{
-			Debug.Log("plate") ;
 		}
 	}
 
