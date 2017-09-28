@@ -7,9 +7,9 @@ public class Pression_Trigger : MonoBehaviour {
 	public GameObject plateformActive ;
 	
 	// Use this for initialization
-	void Awake () 
+	void Start () 
 	{
-		Game_Manager.Instance().RegisterObject(plateformActive) ;
+		
 	}
 	
 	// Update is called once per frame

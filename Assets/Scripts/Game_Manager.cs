@@ -42,6 +42,7 @@ public class Game_Manager : NetworkBehaviour {
 			for(int i = 0 ; i < spawnList.Count ; i++)
 			{
 				spawnList[i].SetActive(false) ;
+				NetworkServer.UnSpawn(spawnList[i]);
 			} 
 		}
 	}
