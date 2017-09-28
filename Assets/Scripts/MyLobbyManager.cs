@@ -47,6 +47,8 @@ public class MyLobbyManager : NetworkLobbyManager  {
 
 	public void AddPlayer (Player_Camera playerScript){
 		playerList.Add(playerScript);
+		Debug.Log (NetworkLobbyManager.singleton.startPositions[0].position);
+		Debug.Log (NetworkLobbyManager.singleton.startPositions[1].position);
 	}
 
 	public void QuitGame()
@@ -55,7 +57,9 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		playerList[1].RpcQuitGame();
 	}
 
-	public void OnServerChangeScene(){
+	public void OnServerSceneChanged(){
+		// Debug.Log (NetworkLobbyManager.singleton.startPositions[0].position);
+		// Debug.Log (NetworkLobbyManager.singleton.startPositions[1].position);
 		playerList[0].RpcGoTo(NetworkLobbyManager.singleton.startPositions[0].gameObject);
 		playerList[1].RpcGoTo(NetworkLobbyManager.singleton.startPositions[1].gameObject);
 	}
