@@ -206,7 +206,7 @@ MonoBehaviour:
   m_MaxAngularVelocity: 25
   m_JumpPower: 3
   cdInitial: 0
-  boostMultiplier: 0
+  boostMultiplier: 3
 --- !u!135 &135394672273196932
 SphereCollider:
   m_ObjectHideFlags: 1
