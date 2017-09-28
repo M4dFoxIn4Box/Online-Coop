@@ -68,6 +68,7 @@ public class Player_Camera : NetworkBehaviour {
 		if(other.CompareTag("PressionPlate") && isLocalPlayer)
 		{
 			CmdSpawnSomething(other.transform.gameObject.GetComponent<Pression_Trigger>().plateformActive) ;
+			Debug.Log("plate") ;
 		}
 	}
 }

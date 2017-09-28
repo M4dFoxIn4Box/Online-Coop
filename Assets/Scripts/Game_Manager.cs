@@ -85,11 +85,6 @@ public class Game_Manager : NetworkBehaviour {
 		}
 	}
 
-	public void RegisterObject(GameObject objectRegister)
-	{
-		spawnList.Add(objectRegister) ;
-	}
-
 	[Command]
 	public void CmdQuitGame()
 	{
@@ -104,8 +99,8 @@ public class Game_Manager : NetworkBehaviour {
 		{
 			if(toSpawn == spawnList[o])
 			{
-				spawnList[o].SetActive(true);
 				NetworkServer.Spawn(spawnList[o]);
+				spawnList[o].SetActive(true);
 			}
 		}
 	}

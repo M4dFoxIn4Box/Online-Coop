@@ -9,7 +9,7 @@ public class Door_Trigger : MonoBehaviour {
 	// Use this for initialization
 	void Awake () 
 	{
-		Game_Manager.Instance().RegisterObject(plateformActive) ;
+		
 	}
 	
 	// Update is called once per frame
