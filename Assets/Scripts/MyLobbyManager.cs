@@ -41,16 +41,16 @@ public class MyLobbyManager : NetworkLobbyManager  {
 	public void AddNb (GameObject trig){
 		nbToWin += 1;
 		Debug.Log(nbToWin);
-		if (trig == winTriggers[0])
-		{
-			NetworkServer.UnSpawn(winTriggers[0]);
-			winTriggers[0].SetActive(false);
-		}
-		if (trig == winTriggers[1])
-		{
-			NetworkServer.UnSpawn(winTriggers[1]);
-			winTriggers[1].SetActive(false);
-		}
+		// if (trig == winTriggers[0])
+		// {
+		// 	NetworkServer.UnSpawn(winTriggers[0]);
+		// 	winTriggers[0].SetActive(false);
+		// }
+		// if (trig == winTriggers[1])
+		// {
+		// 	NetworkServer.UnSpawn(winTriggers[1]);
+		// 	winTriggers[1].SetActive(false);
+		// }
 		if (nbToWin >= 2)
 		{
 			NetworkLobbyManager.singleton.ServerChangeScene("Scene_Online2");
