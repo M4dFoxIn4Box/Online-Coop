@@ -71,7 +71,7 @@ public class MyLobbyManager : NetworkLobbyManager  {
 
 	public IEnumerator Test ()
 	{
-		yield return new WaitForSeconds (1.2f);
+		yield return new WaitForSeconds (0.8f);
 		playerList[0].RpcGoTo(startPositions[0].gameObject);
 		playerList[1].RpcGoTo(startPositions[1].gameObject);
 	}
