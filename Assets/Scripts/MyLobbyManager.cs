@@ -39,11 +39,11 @@ public class MyLobbyManager : NetworkLobbyManager  {
 	}
 	public void SendHelpRequest(GameObject playGO)
 	{
-		if(playGO == playerList[0])
+		if(playGO == playerList[0].gameObject)
 		{
 			playerList[0].RpcIconToHelp() ;
 		}
-		else if(playGO == playerList[1])
+		else if(playGO == playerList[1].gameObject)
 		{
 			playerList[1].RpcIconToHelp() ;
 		}
