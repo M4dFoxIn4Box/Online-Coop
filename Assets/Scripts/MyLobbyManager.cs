@@ -73,8 +73,11 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		Debug.Log(nbToWin);
 		if (nbToWin >= 2)
 		{
-			currentSceneIndex++ ;
-			NetworkLobbyManager.singleton.ServerChangeScene(sceneBoard[currentSceneIndex]);
+			if(sceneBoard[currentSceneIndex+1] != null)
+			{
+				currentSceneIndex++ ;
+				NetworkLobbyManager.singleton.ServerChangeScene(sceneBoard[currentSceneIndex]);
+			}
 		}
 	}
 
