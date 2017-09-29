@@ -78,7 +78,8 @@ public class Menu_Pause : NetworkBehaviour {
 
     public void QuitterPause()
     {
-        // MyLobbyManager.singleton.CmdQuitGame() ;             
+        //MyLobbyManager.singleton.CmdQuitGame() ;
+        Application.Quit() ;           
     }
 
     public bool ReturnPause()
