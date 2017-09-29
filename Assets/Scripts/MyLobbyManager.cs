@@ -73,14 +73,15 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		Debug.Log(nbToWin);
 		if (nbToWin >= 2)
 		{
-			currentSceneIndex++ ;
+			
 			if(sceneBoard[currentSceneIndex] == "" || currentSceneIndex > sceneBoard.Length || sceneBoard.Length == 0)
 			{	
 				Debug.Log("Quit") ;
 				QuitGame() ;
 			}
-			else if(sceneBoard[currentSceneIndex] != "" || currentSceneIndex < sceneBoard.Length || sceneBoard.Length != 0)
+			else
 			{
+				currentSceneIndex++ ;
 				NetworkLobbyManager.singleton.ServerChangeScene(sceneBoard[currentSceneIndex]);
 				Debug.Log("next") ;
 			}
