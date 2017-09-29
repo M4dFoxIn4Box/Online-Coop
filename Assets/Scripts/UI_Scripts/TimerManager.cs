@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerManager : NetworkBehaviour {
 
@@ -36,6 +37,6 @@ public class TimerManager : NetworkBehaviour {
 
 	public void ReloadScene ()
 	{
-		// MylobbyManager.Instance().
+		NetworkLobbyManager.singleton.ServerChangeScene(SceneManager.GetActiveScene().name);
 	}
 }
