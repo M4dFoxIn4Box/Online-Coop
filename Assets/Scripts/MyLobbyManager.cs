@@ -37,14 +37,15 @@ public class MyLobbyManager : NetworkLobbyManager  {
 	void Update () {
 
 	}
+	
 	public void SendHelpRequest(GameObject playGO)
 	{
-		if(playGO == playerList[0].gameObject)
+		if(playerList[0].gameObject == playGO)
 		{	
 			Debug.Log("SendRequest") ;
 			playerList[1].RpcIconToHelp() ;
 		}
-		else if(playGO == playerList[1].gameObject)
+		else if(playerList[1].gameObject == playGO)
 		{
 			Debug.Log("SendRequest") ;
 			playerList[0].RpcIconToHelp() ;
