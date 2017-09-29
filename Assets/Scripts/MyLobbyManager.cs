@@ -42,12 +42,12 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		if(playGO == playerList[0].gameObject)
 		{	
 			Debug.Log("SendRequest") ;
-			playerList[0].RpcIconToHelp() ;
+			playerList[1].RpcIconToHelp() ;
 		}
 		else if(playGO == playerList[1].gameObject)
 		{
 			Debug.Log("SendRequest") ;
-			playerList[1].RpcIconToHelp() ;
+			playerList[0].RpcIconToHelp() ;
 		}
 	}
 
