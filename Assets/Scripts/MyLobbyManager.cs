@@ -74,7 +74,7 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		if (nbToWin >= 2)
 		{
 			currentSceneIndex++ ;
-			if(currentSceneIndex > sceneBoard.Length)
+			if(sceneBoard[currentSceneIndex] == "")
 			{
 				QuitGame() ;
 			}
