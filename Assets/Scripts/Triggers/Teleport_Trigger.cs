@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Teleport_Trigger : MonoBehaviour {
 
+	private int randomNumber ;
 	// Use this for initialization
 	void Start () 
 	{
@@ -20,7 +21,10 @@ public class Teleport_Trigger : MonoBehaviour {
 	{
 		if(other.CompareTag("Player"))
 		{
+			randomNumber = Random.Range(0,3) ;
 			IconToDisplay() ;
+			other.GetComponent<Player_Camera>().ToggleHelp() ;
+			other.GetComponent<Player_Camera>().ChangeTouchIndex(randomNumber) ;
 			Debug.Log("Demand trigger") ;
 		}
 	}
@@ -29,6 +33,7 @@ public class Teleport_Trigger : MonoBehaviour {
 	{
 		if(other.CompareTag("Player"))
 		{
+			other.GetComponent<Player_Camera>().DisableHelp() ;
 			HideIcon() ;
 		}
 	}
@@ -36,7 +41,7 @@ public class Teleport_Trigger : MonoBehaviour {
 	void IconToDisplay()
 	{
 		Debug.Log("IconToD") ;
-		Menu_Pause.Instance().DisplayActiveKey(Random.Range(0,3)) ;
+		Menu_Pause.Instance().DisplayActiveKey(randomNumber) ;
 	}
 
 	void HideIcon()

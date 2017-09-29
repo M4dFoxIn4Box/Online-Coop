@@ -6,6 +6,10 @@ using UnityStandardAssets.Vehicles.Ball;
 
 public class Player_Camera : NetworkBehaviour {
 
+	private bool canAskHelp = false ;
+	private int touchIndex ;
+
+
 	public BallUserControl myPlayerControls;
 
 	void Awake()
@@ -28,7 +32,23 @@ public class Player_Camera : NetworkBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		if(canAskHelp)
+		{
+			if(touchIndex == 0 && Input.GetButtonDown("joystick button 2") ) // X button
+			{
+				Menu_Pause.Instance().HideActiveKey() ;
+			}
+
+			if(touchIndex == 1 && Input.GetButtonDown("joystick button 1")) // B button
+			{
+				Menu_Pause.Instance().HideActiveKey() ;
+			}
+
+			if(touchIndex == 2 && Input.GetButtonDown("joystick button 3")) // Y button
+			{
+				Menu_Pause.Instance().HideActiveKey() ;
+			}
+		}
 	}
 
 	[Command]
@@ -58,6 +78,26 @@ public class Player_Camera : NetworkBehaviour {
 			GetComponent<Rigidbody>().isKinematic = true;
 			CmdFinished();
 		}
+	}
+
+	public void ToggleHelp()
+	{
+		canAskHelp = true ;
+	}
+
+	public void DisableHelp()
+	{
+		canAskHelp = false ;
+	}
+
+	public bool ReturnCanAskHelp()
+	{
+		return canAskHelp ;
+	}
+
+	public void ChangeTouchIndex(int idx)
+	{
+		touchIndex = idx ;
 	}
 
 	[ClientRpc]
