@@ -21,7 +21,7 @@ public class Teleport_Trigger : MonoBehaviour {
 	{
 		if(other.CompareTag("Player"))
 		{
-			randomNumber = Random.Range(0,3) ;
+			randomNumber = Random.Range(0,2) ;
 			IconToDisplay() ;
 			other.GetComponent<Player_Camera>().ToggleHelp() ;
 			other.GetComponent<Player_Camera>().ChangeTouchIndex(randomNumber) ;
