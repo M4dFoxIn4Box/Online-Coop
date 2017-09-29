@@ -37,16 +37,19 @@ public class Player_Camera : NetworkBehaviour {
 			if(touchIndex == 0 && Input.GetButtonDown("X_Button") ) // X button
 			{
 				Menu_Pause.Instance().HideActiveKey() ;
+				Debug.Log("Right") ;
 			}
 
 			if(touchIndex == 1 && Input.GetButtonDown("B_Button")) // B button
 			{
 				Menu_Pause.Instance().HideActiveKey() ;
+				Debug.Log("Right") ;
 			}
 
 			if(touchIndex == 2 && Input.GetButtonDown("Y_Button")) // Y button
 			{
 				Menu_Pause.Instance().HideActiveKey() ;
+				Debug.Log("Right") ;
 			}
 		}
 	}
