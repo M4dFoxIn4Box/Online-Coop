@@ -12,6 +12,8 @@ public class MyLobbyManager : NetworkLobbyManager  {
 
 	public List<Player_Camera> playerList = new List<Player_Camera>();
 
+	private int randomIndex ;
+
 	private static MyLobbyManager instance;
     public static MyLobbyManager Instance ()
     {
@@ -37,18 +39,32 @@ public class MyLobbyManager : NetworkLobbyManager  {
 	void Update () {
 
 	}
-	
+
 	public void SendHelpRequest(GameObject playGO)
 	{
 		if(playerList[0].gameObject == playGO)
 		{	
+			randomIndex = Random.Range(0,2) ;
 			Debug.Log("SendRequest") ;
-			playerList[1].RpcIconToHelp() ;
+			playerList[1].RpcIconToHelp(randomIndex) ;
 		}
 		else if(playerList[1].gameObject == playGO)
 		{
+			randomIndex = Random.Range(0,2) ;
 			Debug.Log("SendRequest") ;
-			playerList[0].RpcIconToHelp() ;
+			playerList[0].RpcIconToHelp(randomIndex) ;
+		}
+	}
+
+	public void Response(GameObject gO)
+	{
+		if(playerList[0].gameObject == gO)
+		{	
+			playerList[1].RpcTeleport() ;
+		}
+		else if(playerList[1].gameObject == gO)
+		{
+			playerList[0].RpcTeleport() ;
 		}
 	}
 

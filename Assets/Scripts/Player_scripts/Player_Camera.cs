@@ -7,7 +7,11 @@ using UnityStandardAssets.Vehicles.Ball;
 public class Player_Camera : NetworkBehaviour {
 
 	private bool canAskHelp = false ;
+	private bool canResponse = false ;
+	private Vector3 currentTeleportZone ;
+
 	private int touchIndex ;
+	private int touchIndexHelp ;
 
 
 	public BallUserControl myPlayerControls;
@@ -46,6 +50,7 @@ public class Player_Camera : NetworkBehaviour {
 			{
 				Menu_Pause.Instance().HideActiveKey() ;
 				CmdAskForHelp(gameObject) ;
+				canAskHelp = false ;
 				Debug.Log("Right") ;
 			}
 
@@ -53,7 +58,26 @@ public class Player_Camera : NetworkBehaviour {
 			{
 				Menu_Pause.Instance().HideActiveKey() ;
 				CmdAskForHelp(gameObject) ;
+				canAskHelp = false ;
 				Debug.Log("Right") ;
+			}
+		}
+
+		if(canResponse)
+		{
+			if(touchIndexHelp == 0 && Input.GetButtonDown("X_Button") ) // X button
+			{
+				canResponse = false ;
+			}
+
+			if(touchIndexHelp == 1 && Input.GetButtonDown("B_Button")) // B button
+			{
+				canResponse = false ;
+			}
+
+			if(touchIndexHelp == 2 && Input.GetButtonDown("Y_Button")) // Y button
+			{
+				canResponse = false ;
 			}
 		}
 	}
@@ -86,6 +110,13 @@ public class Player_Camera : NetworkBehaviour {
 			CmdFinished();
 		}
 	}
+	public void ChangeCurrentTpZone(GameObject posTp)
+	{
+		if(posTp != null)
+		{
+			currentTeleportZone = posTp.transform.position ;
+		}
+	}
 
 	public void ToggleHelp()
 	{
@@ -116,18 +147,32 @@ public class Player_Camera : NetworkBehaviour {
 		}
 	}
 
+	[ClientRpc]
+	public void RpcTeleport()
+	{
+		transform.position = currentTeleportZone ;
+	}
+
 	[Command]
 	public void CmdAskForHelp(GameObject ply)
 	{	
 		MyLobbyManager.Instance().SendHelpRequest(ply) ;
 	}
 
+	[Command]
+	public void CmdResponseToHelp(GameObject currentPly)
+	{
+		MyLobbyManager.Instance().Response(currentPly) ;
+	}
+
 	[ClientRpc]
-	public void RpcIconToHelp()
+	public void RpcIconToHelp(int idx)
 	{
 		if(isLocalPlayer)
 		{
-			Menu_Pause.Instance().DisplayIconToHelp() ;
+			Menu_Pause.Instance().DisplayIconToHelp(idx) ;
+			touchIndexHelp = idx ;
+			canResponse = true ;
 		}
 	}
 }

@@ -64,9 +64,9 @@ public class Menu_Pause : NetworkBehaviour {
         demandIcon.gameObject.SetActive(false) ;
     }
 
-   public void DisplayIconToHelp()
+   public void DisplayIconToHelp(int helpIconIdx)
     {
-        helpIcon.sprite = iconList[Random.Range(0,2)] ;
+        helpIcon.sprite = iconList[helpIconIdx] ;
         helpIcon.gameObject.SetActive(true) ;
     }
 
