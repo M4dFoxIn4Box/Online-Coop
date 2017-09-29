@@ -236,6 +236,7 @@ MonoBehaviour:
   sceneBoard:
   - Scene_Online2
   - Scene_Online3
+  - Scene_Online4
   playerList: []
 --- !u!4 &69132533
 Transform:

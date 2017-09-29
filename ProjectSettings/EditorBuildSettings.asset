@@ -16,6 +16,9 @@ EditorBuildSettings:
     guid: 4d735198830760945a698d6ddd9a7f53
   - enabled: 1
     path: Assets/Scenes/Scene_Online3.unity
+    guid: 9bdf295b1a11e9140885c3b52717918d
+  - enabled: 1
+    path: Assets/Scenes/Scene_Online4.unity
     guid: f9def57206a25154f961916a72a3d4ac
   - enabled: 0
     path: Assets/Scenes/Test_Scenes/Killian_Test.unity
