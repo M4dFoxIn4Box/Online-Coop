@@ -8,7 +8,7 @@ public class MyLobbyManager : NetworkLobbyManager  {
 
 	private int nbToWin = 0;
 	public string[] sceneBoard;
-	private int currentSceneIndex = 1 ;
+	private int currentSceneIndex = -1 ;
 
 	public List<Player_Camera> playerList = new List<Player_Camera>();
 
