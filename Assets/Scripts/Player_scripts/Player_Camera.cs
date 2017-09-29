@@ -67,16 +67,22 @@ public class Player_Camera : NetworkBehaviour {
 		{
 			if(touchIndexHelp == 0 && Input.GetButtonDown("X_Button") ) // X button
 			{
+				Menu_Pause.Instance().HideIconHelp() ;
+				CmdResponseToHelp(gameObject) ;
 				canResponse = false ;
 			}
 
 			if(touchIndexHelp == 1 && Input.GetButtonDown("B_Button")) // B button
 			{
+				Menu_Pause.Instance().HideIconHelp() ;
+				CmdResponseToHelp(gameObject) ;
 				canResponse = false ;
 			}
 
 			if(touchIndexHelp == 2 && Input.GetButtonDown("Y_Button")) // Y button
 			{
+				Menu_Pause.Instance().HideIconHelp() ;
+				CmdResponseToHelp(gameObject) ;
 				canResponse = false ;
 			}
 		}

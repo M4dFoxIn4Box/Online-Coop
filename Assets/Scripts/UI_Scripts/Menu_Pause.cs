@@ -70,6 +70,12 @@ public class Menu_Pause : NetworkBehaviour {
         helpIcon.gameObject.SetActive(true) ;
     }
 
+    public void HideIconHelp()
+    {
+        helpIcon.sprite = null ;
+        helpIcon.gameObject.SetActive(false) ;
+    }
+
     public void QuitterPause()
     {
         // MyLobbyManager.singleton.CmdQuitGame() ;             
