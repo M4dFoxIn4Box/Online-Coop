@@ -234,8 +234,8 @@ MonoBehaviour:
   m_PlayScene: Scene_Online
   lobbySlots: []
   sceneBoard:
-  - Scene_Online2
-  - 
+  - '"Scene_Online2"'
+  - '"Scene_Online3"'
   playerList: []
 --- !u!4 &69132533
 Transform:
