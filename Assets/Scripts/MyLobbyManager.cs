@@ -74,7 +74,14 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		if (nbToWin >= 2)
 		{
 			currentSceneIndex++ ;
-			NetworkLobbyManager.singleton.ServerChangeScene(sceneBoard[currentSceneIndex]);
+			if(currentSceneIndex > sceneBoard.Length)
+			{
+				QuitGame() ;
+			}
+			else
+			{
+				NetworkLobbyManager.singleton.ServerChangeScene(sceneBoard[currentSceneIndex]);
+			}
 		}
 	}
 
