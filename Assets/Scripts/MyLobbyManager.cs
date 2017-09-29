@@ -103,14 +103,14 @@ public class MyLobbyManager : NetworkLobbyManager  {
 	public override void OnLobbyServerSceneChanged (string scName)
 	{
 		
-		if (scName != "Scene_Online")
-		{
+		//if (scName != "Scene_Online")
+		//{
 			if (playerList.Count > 0)
 			{
 				StartCoroutine("Test");
 				nbToWin = 0;
 			}
-		}
+		//}
 	}
 
 
