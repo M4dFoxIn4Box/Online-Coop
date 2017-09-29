@@ -34,17 +34,17 @@ public class Player_Camera : NetworkBehaviour {
 	{
 		if(canAskHelp)
 		{
-			if(touchIndex == 0 && Input.GetButtonDown("joystick button 2") ) // X button
+			if(touchIndex == 0 && Input.GetButtonDown("X_Button") ) // X button
 			{
 				Menu_Pause.Instance().HideActiveKey() ;
 			}
 
-			if(touchIndex == 1 && Input.GetButtonDown("joystick button 1")) // B button
+			if(touchIndex == 1 && Input.GetButtonDown("B_Button")) // B button
 			{
 				Menu_Pause.Instance().HideActiveKey() ;
 			}
 
-			if(touchIndex == 2 && Input.GetButtonDown("joystick button 3")) // Y button
+			if(touchIndex == 2 && Input.GetButtonDown("Y_Button")) // Y button
 			{
 				Menu_Pause.Instance().HideActiveKey() ;
 			}
