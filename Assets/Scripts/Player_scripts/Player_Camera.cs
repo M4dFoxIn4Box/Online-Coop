@@ -159,6 +159,17 @@ public class Player_Camera : NetworkBehaviour {
 		transform.position = currentTeleportZone ;
 	}
 
+	public void OutOfTrigger()
+	{
+		CmdHideIconHelpToAnotherGuy(gameObject) ;
+	}
+
+	[Command]
+	public void CmdHideIconHelpToAnotherGuy(GameObject gO)
+	{
+		MyLobbyManager.Instance().PlayerIsOutTrigger(gO) ;
+	}
+
 	[Command]
 	public void CmdAskForHelp(GameObject ply)
 	{	
@@ -179,6 +190,16 @@ public class Player_Camera : NetworkBehaviour {
 			Menu_Pause.Instance().DisplayIconToHelp(idx) ;
 			touchIndexHelp = idx ;
 			canResponse = true ;
+		}
+	}
+
+	[ClientRpc]
+	public void RpcHideIconToHelp()
+	{
+		if(isLocalPlayer)
+		{
+			Menu_Pause.Instance().HideIconHelp() ;
+			canResponse = false ;
 		}
 	}
 }

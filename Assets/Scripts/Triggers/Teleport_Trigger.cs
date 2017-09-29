@@ -37,6 +37,7 @@ public class Teleport_Trigger : MonoBehaviour {
 		{
 			other.GetComponent<Player_Camera>().DisableHelp() ;
 			other.GetComponent<Player_Camera>().ChangeCurrentTpZone(null) ;
+			other.GetComponent<Player_Camera>().OutOfTrigger() ;
 			HideIcon() ;
 		}
 	}

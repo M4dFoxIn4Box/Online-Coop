@@ -88,7 +88,20 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		playerList[1].RpcQuitGame();
 	}
 
-	public override void OnLobbyServerSceneChanged (string scName){
+	public void PlayerIsOutTrigger(GameObject gamePlayer)
+	{
+		if(playerList[0].gameObject == gamePlayer)
+		{	
+			playerList[1].RpcHideIconToHelp() ;
+		}
+		else if(playerList[1].gameObject == gamePlayer)
+		{
+			playerList[0].RpcHideIconToHelp() ;
+		}
+	}
+
+	public override void OnLobbyServerSceneChanged (string scName)
+	{
 		
 		if (scName != "Scene_Online")
 		{
@@ -99,6 +112,8 @@ public class MyLobbyManager : NetworkLobbyManager  {
 			}
 		}
 	}
+
+
 
 	public IEnumerator Test ()
 	{
