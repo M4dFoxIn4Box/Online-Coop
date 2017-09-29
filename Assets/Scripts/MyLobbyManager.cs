@@ -126,6 +126,11 @@ public class MyLobbyManager : NetworkLobbyManager  {
 		playerList[1].RpcGoTo(startPositions[1].gameObject);
 	}
 
+	public void QuitButton()
+	{
+		Application.Quit() ;
+	}
+
 	//-------------------------------------------//
 
 	public void OnClickStart (int playersNb){
